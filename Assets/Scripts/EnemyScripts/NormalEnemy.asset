@@ -17,3 +17,5 @@ MonoBehaviour:
   enemyScale: {x: 2, y: 2, z: 2}
   enemyName: Bub
   explosion: {fileID: 5828171044618714390, guid: f44ab05508531774a8db7df29ed88373, type: 3}
+  enemyHealth: 100
+  enemyDamage: 1

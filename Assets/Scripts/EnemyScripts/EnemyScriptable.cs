@@ -13,4 +13,5 @@ public class EnemyScriptable : ScriptableObject
     public Vector3 enemyScale = Vector3.one;
     public string enemyName = "Type";
     public ParticleSystem explosion;
+    public int enemyDamage;
 }

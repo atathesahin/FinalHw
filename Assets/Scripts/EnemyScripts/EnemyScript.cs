@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +8,18 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private EnemyScriptable enemyScriptable = null;
     private GameObject _player;
     private Rigidbody _rigidbody;
+    private Player player;
+ 
+
+    public float enemyHealth;
     void Start()
     {
         enemyScriptable.enemyColor = GetComponent<Renderer>().material.color;
        _rigidbody = GetComponent<Rigidbody>();
        _player = GameObject.Find("Player");
        enemyScriptable.enemyScale = transform.localScale;
+       
+     
     }
 
     // Update is called once per frame
@@ -30,5 +37,23 @@ public class EnemyScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
+
+    }
+
+    private void OnCollisionStay(Collision collisionInfo)
+    {
+        if (collisionInfo.gameObject == _player)
+        {
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        if (player == null)
+        {
+            player = _player.GetComponent<Player>();
+            player.TakeDamage(enemyScriptable.enemyDamage);
+        }
     }
 }

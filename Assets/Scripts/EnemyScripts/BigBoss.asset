@@ -17,3 +17,5 @@ MonoBehaviour:
   enemyScale: {x: 3, y: 3, z: 3}
   enemyName: Bigboss
   explosion: {fileID: 4108662427257208872, guid: cab3b73fd8ed53c41b20d6a093c56934, type: 3}
+  enemyHealth: 200
+  enemyDamage: 5

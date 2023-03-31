@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private MainManager _mainManager;
-    private Enemy _enemy;
+    
     
     private RaycastHit _raycastHit;
     private Ray _ray;
@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] private ParticleSystem speedSystem;
     [SerializeField] private ParticleSystem shootSystem;
 
+    [SerializeField] private float maxHp = 100;
+    [SerializeField] private float currentHp;
 
     public GameObject speedUp;
 
@@ -24,14 +26,15 @@ public class Player : MonoBehaviour
     private float _verticalInput;
     private float _horizontalInput;
     [SerializeField] private float speed;
-
+    [SerializeField] private BarStatus _status;
     private float shotTime;
     private float shotInterval = 0.2f;
-    private bool hasSpeedup;
+    private bool _hasSpeedup;
     private Vector3 movement;
     
     void Start()
     {
+        _status.SetState(currentHp,maxHp);
     }
 
     // Update is called once per frame
@@ -88,7 +91,7 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("Speedup"))
         {
-            hasSpeedup = true;
+            _hasSpeedup = true;
             Destroy(other.gameObject);
             speedUp.gameObject.SetActive(true);
             StartCoroutine(SpeedupCount());
@@ -105,8 +108,8 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Rigidbody _enemyrigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
+            //Rigidbody _enemyrigidbody = collision.gameObject.GetComponent<Rigidbody>();
+            //Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
 
         }
         
@@ -115,7 +118,7 @@ public class Player : MonoBehaviour
     private IEnumerator SpeedupCount()
     {
         yield return new WaitForSeconds(7);
-        hasSpeedup = false;
+        _hasSpeedup = false;
         speed = 10;
         speedUp.gameObject.SetActive(false);
     }
@@ -130,6 +133,32 @@ public class Player : MonoBehaviour
         {
             minimap.gameObject.SetActive(false);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHp -= damage;
+        if (currentHp <= 0)
+        {
+            
+        }
+        _status.SetState(currentHp,maxHp);
+    }
+
+    public void Heal(int amount)
+    {
+        if (currentHp <= 0)
+        {
+            return;
+        }
+
+        currentHp += amount;
+
+        if (currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
+        _status.SetState(currentHp,maxHp);
     }
     
 }
