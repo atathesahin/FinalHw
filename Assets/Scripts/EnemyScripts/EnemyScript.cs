@@ -9,7 +9,8 @@ public class EnemyScript : MonoBehaviour
     private GameObject _player;
     private Rigidbody _rigidbody;
     private Player player;
- 
+  
+    [SerializeField] private int experienceReward = 400;
 
     public float enemyHealth;
     void Start()
@@ -33,11 +34,13 @@ public class EnemyScript : MonoBehaviour
             Destroy(gameObject); 
             
         }
+
+        
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
-
+        //Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
+       
     }
 
     private void OnCollisionStay(Collision collisionInfo)
@@ -53,7 +56,22 @@ public class EnemyScript : MonoBehaviour
         if (player == null)
         {
             player = _player.GetComponent<Player>();
-            player.TakeDamage(enemyScriptable.enemyDamage);
+            
+          
         }
+        player.TakeDamage(enemyScriptable.enemyDamage);
+    }
+
+    public void TakenDamage(float damage)
+    {
+        enemyHealth -= damage;
+
+        if (enemyHealth <= 1)
+        {
+            _player.GetComponent<Level>().AddExperience(experienceReward);
+            Destroy(gameObject);
+            
+        }
+        
     }
 }

@@ -6,23 +6,23 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private MainManager _mainManager;
-    
+    private EnemyScript _enemyScript;
     
     private RaycastHit _raycastHit;
     private Ray _ray;
 
-    [SerializeField] private Transform _point;
+    //[SerializeField] private Transform _point;
     [SerializeField] private GameObject _prefab;
-    [SerializeField] private GameObject minimap;
+    
     [SerializeField] private ParticleSystem speedSystem;
-    [SerializeField] private ParticleSystem shootSystem;
+    [SerializeField] private ParticleSystem explosionSystem;
 
     [SerializeField] private float maxHp = 100;
     [SerializeField] private float currentHp;
 
     public GameObject speedUp;
 
-  
+
     private float _verticalInput;
     private float _horizontalInput;
     [SerializeField] private float speed;
@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
     {
         gameObject.transform.position = transform.position;
         HandleShoot();
-        MiniMap();
+        
           
     }
 
@@ -69,7 +69,17 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(_ray, out _raycastHit))
         {
             transform.LookAt(new Vector3(_raycastHit.point.x,transform.position.y,_raycastHit.point.z));
+            
+           /* 
+            if (_raycastHit.collider.CompareTag("Enemy"))
+            {
+                _raycastHit.collider.GetComponent<EnemyScript>().TakenDamage(1);
+            
+            }
+            */
+          
         }
+        
     }
 
     void HandleShoot()
@@ -77,13 +87,19 @@ public class Player : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && Time.time > shotTime)
         {
-            Instantiate(_prefab, _point.transform.position, _point.rotation);
+            Instantiate(explosionSystem, _raycastHit.point, Quaternion.identity);
             shotTime = Time.time + shotInterval;
-            Instantiate(shootSystem, _point.transform.position, _point.rotation);
-        
-
+            
+            
+            if (_raycastHit.collider.CompareTag("Enemy"))
+            {
+                _raycastHit.collider.GetComponent<EnemyScript>().TakenDamage(15);
+            
+            }
+            
+            
         }
-
+        
 
     }
 
@@ -99,20 +115,9 @@ public class Player : MonoBehaviour
             Instantiate(speedSystem, other.transform.position + new Vector3(0,1,0), transform.rotation);
         }
         
-       
-    }
-
-   
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            //Rigidbody _enemyrigidbody = collision.gameObject.GetComponent<Rigidbody>();
-            //Vector3 awayFromPlayer = collision.gameObject.transform.position - transform.position;
-
-        }
         
+        
+       
     }
 
     private IEnumerator SpeedupCount()
@@ -123,17 +128,7 @@ public class Player : MonoBehaviour
         speedUp.gameObject.SetActive(false);
     }
 
-    void MiniMap()
-    {
-        if (Input.GetKey(KeyCode.Tab))
-        {
-            minimap.gameObject.SetActive(true);
-        }
-        else
-        {
-            minimap.gameObject.SetActive(false);
-        }
-    }
+    
 
     public void TakeDamage(float damage)
     {

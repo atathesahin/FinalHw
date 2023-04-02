@@ -12,7 +12,7 @@ public class SpawnGenerator : MonoBehaviour
     private int i = 0;
     private bool _stopSpawning = false;
     
-    private float spawnRange = 30;
+    private float spawnRange = 70;
     float spawnY = (float)0.5;
     
     void Awake()
