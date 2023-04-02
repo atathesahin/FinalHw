@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemyScript : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class EnemyScript : MonoBehaviour
     private GameObject _player;
     private Rigidbody _rigidbody;
     private Player player;
-  
+    const float m_dropChance = 1f / 10f;
     [SerializeField] private int experienceReward = 400;
 
     public float enemyHealth;
@@ -70,8 +71,17 @@ public class EnemyScript : MonoBehaviour
         {
             _player.GetComponent<Level>().AddExperience(experienceReward);
             Destroy(gameObject);
+            Drop();
             
         }
         
+    }
+
+    private void Drop()
+    {
+        if (Random.Range(0f, 1f) <= m_dropChance)
+        {
+            Instantiate(enemyScriptable.dropObject, transform.position, transform.rotation);
+        }
     }
 }

@@ -17,3 +17,5 @@ MonoBehaviour:
   enemyScale: {x: 3, y: 3, z: 3}
   enemyName: Bigboss
   enemyDamage: 2
+  dropObject: {fileID: 4106823351813177749, guid: 656ceb180cfdff14db5c14d26b837616, type: 3}
+  dropChance: 3

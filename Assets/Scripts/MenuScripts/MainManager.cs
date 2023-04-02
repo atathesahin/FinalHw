@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    public GameObject pause;
-    public GameObject backMenu;
-    public GameObject image;
+    [SerializeField] private GameObject pause;
+    [SerializeField] private GameObject backMenu;
+    [SerializeField] private GameObject image;
+
     [SerializeField] private GameObject minimap;
     
     public bool isPause;
@@ -74,8 +75,7 @@ public class MainManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-   
-   
-   
-    
+
+
+
 }
