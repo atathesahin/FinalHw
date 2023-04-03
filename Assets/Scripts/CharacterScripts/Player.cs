@@ -1,13 +1,13 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     private MainManager _mainManager;
     private EnemyScript _enemyScript;
-    
+    private Level _level;
+ 
     private RaycastHit _raycastHit;
     private Ray _ray;
 
@@ -16,33 +16,42 @@ public class Player : MonoBehaviour
     
     [SerializeField] private ParticleSystem speedSystem;
     [SerializeField] private ParticleSystem explosionSystem;
-
-    [SerializeField] private float maxHp = 100;
-    [SerializeField] private float currentHp;
+    
+   
+    private bool isDead;
 
     public GameObject speedUp;
 
-
     private float _verticalInput;
     private float _horizontalInput;
-    [SerializeField] private float speed;
+    public float speed;
+    
     [SerializeField] private BarStatus _status;
-    private float shotTime;
+    [SerializeField] Text healthText;
+    public float maxHp = 100;
+    public float currentHp;
+    
+    private float shortTime;
+    private float healTime;
     private float shotInterval = 0.2f;
+    private float hpReg = 0.1f;
     private bool _hasSpeedup;
     private Vector3 movement;
     
     void Start()
     {
         _status.SetState(currentHp,maxHp);
+        _status.GetComponent<BarStatus>();
     }
 
     // Update is called once per frame
     private void Update()
     {
         gameObject.transform.position = transform.position;
+        healthText.text = currentHp + "/" + maxHp.ToString();
         HandleShoot();
         
+        HealReg();
           
     }
 
@@ -85,15 +94,15 @@ public class Player : MonoBehaviour
     void HandleShoot()
     {
         
-        if (Input.GetMouseButtonDown(0) && Time.time > shotTime)
+        if (Input.GetMouseButtonDown(0) && Time.time > shortTime)
         {
             Instantiate(explosionSystem, _raycastHit.point, Quaternion.identity);
-            shotTime = Time.time + shotInterval;
+            shortTime = Time.time + shotInterval;
             
             
             if (_raycastHit.collider.CompareTag("Enemy"))
             {
-                _raycastHit.collider.GetComponent<EnemyScript>().TakenDamage(15);
+                _raycastHit.collider.GetComponent<EnemyScript>().TakenDamage(10);
             
             }
             
@@ -135,12 +144,14 @@ public class Player : MonoBehaviour
         currentHp -= damage;
         if (currentHp <= 0)
         {
-            
+          
         }
         _status.SetState(currentHp,maxHp);
     }
 
-    public void Heal(int amount)
+  
+
+    private void Heal(int amount)
     {
         if (currentHp <= 0)
         {
@@ -154,6 +165,20 @@ public class Player : MonoBehaviour
             currentHp = maxHp;
         }
         _status.SetState(currentHp,maxHp);
+        
     }
+
+    private void HealReg()
+    {
+        if (currentHp <= 100 && Time.time > healTime)
+        {
+            Heal(1);
+            healTime = Time.time + hpReg;
+            
+        }
+        
+        
+    }
+    
     
 }

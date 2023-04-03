@@ -5,8 +5,10 @@ public class Experience : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI expText;
+
     public void UpdateExperience(int current, int target)
     {
+
         slider.maxValue = target;
         slider.value = current;
     }

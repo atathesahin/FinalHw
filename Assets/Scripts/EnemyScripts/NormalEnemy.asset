@@ -19,3 +19,4 @@ MonoBehaviour:
   enemyDamage: 1
   dropObject: {fileID: 4106823351813177749, guid: 656ceb180cfdff14db5c14d26b837616, type: 3}
   dropChance: 7
+  explosion: {fileID: 5828171044618714390, guid: f44ab05508531774a8db7df29ed88373, type: 3}

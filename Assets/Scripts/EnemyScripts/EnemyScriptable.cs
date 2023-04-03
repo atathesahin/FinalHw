@@ -16,4 +16,5 @@ public class EnemyScriptable : ScriptableObject
     public int enemyDamage;
     public GameObject dropObject;
     public float dropChance;
+    public ParticleSystem explosion;
 }

@@ -139,5 +139,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyScriptable: {fileID: 11400000, guid: 73c41adfc1e3afb43acf935f5439dd03, type: 2}
-  experienceReward: 1250
-  enemyHealth: 90
+  experienceReward: 2000
+  enemyHealth: 40

@@ -10,9 +10,8 @@ public class EnemyScript : MonoBehaviour
     private GameObject _player;
     private Rigidbody _rigidbody;
     private Player player;
-    const float m_dropChance = 1f / 10f;
+    const float MDropChance = 1f / 10f;
     [SerializeField] private int experienceReward = 400;
-
     public float enemyHealth;
     void Start()
     {
@@ -40,7 +39,7 @@ public class EnemyScript : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        //Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
+        Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
        
     }
 
@@ -48,7 +47,9 @@ public class EnemyScript : MonoBehaviour
     {
         if (collisionInfo.gameObject == _player)
         {
+           
             Attack();
+
         }
     }
 
@@ -79,9 +80,10 @@ public class EnemyScript : MonoBehaviour
 
     private void Drop()
     {
-        if (Random.Range(0f, 1f) <= m_dropChance)
+        if (Random.Range(0f, 1f) <= MDropChance)
         {
-            Instantiate(enemyScriptable.dropObject, transform.position, transform.rotation);
+            Instantiate(enemyScriptable.dropObject, transform.position + new Vector3(0,-0.4f,0), transform.rotation);
+            
         }
     }
 }

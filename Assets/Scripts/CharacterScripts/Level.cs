@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    [SerializeField] private int level = 1;
+    public int level = 1;
     [SerializeField] private int experience = 0;
     [SerializeField] Experience _experience;
+    private Player _player;
+    private float _maxHealth;
+    
     int TO_LEVEL_UP
     {
         get
@@ -20,7 +23,10 @@ public class Level : MonoBehaviour
     {
         _experience.UpdateExperience(experience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
+        
+
     }
+
 
     public void AddExperience(int amount)
     {
@@ -35,7 +41,10 @@ public class Level : MonoBehaviour
         {
             experience -= TO_LEVEL_UP;
             level += 1;
+            _maxHealth = GetComponent<Player>().maxHp += 10;
             _experience.SetLevelText(level);
         }
     }
+
+
 }

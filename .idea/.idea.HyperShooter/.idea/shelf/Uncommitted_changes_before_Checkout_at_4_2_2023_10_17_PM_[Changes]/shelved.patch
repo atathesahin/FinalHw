@@ -1,0 +1,83 @@
+Index: Assets/Scripts/EnemyScripts/EnemyScriptable.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Collections;\r\nusing System.Collections.Generic;\r\nusing UnityEngine;\r\n\r\n\r\n[CreateAssetMenu(fileName = \"New Enemy Type\",menuName = \"Enemy Type\")]\r\n\r\npublic class EnemyScriptable : ScriptableObject\r\n{\r\n    \r\n    public Color enemyColor = Color.white;\r\n    public float enemySpeed = 5;\r\n    public Vector3 enemyScale = Vector3.one;\r\n    public string enemyName = \"Type\";\r\n    //public ParticleSystem explosion;\r\n    public int enemyDamage;\r\n    public GameObject dropObject;\r\n    public float dropChance;\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/EnemyScripts/EnemyScriptable.cs b/Assets/Scripts/EnemyScripts/EnemyScriptable.cs
+--- a/Assets/Scripts/EnemyScripts/EnemyScriptable.cs	
++++ b/Assets/Scripts/EnemyScripts/EnemyScriptable.cs	
+@@ -16,4 +16,5 @@
+     public int enemyDamage;
+     public GameObject dropObject;
+     public float dropChance;
++    public ParticleSystem explosion;
+ }
+Index: Assets/Scripts/EnemyScripts/EnemyScript.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System;\r\nusing System.Collections;\r\nusing System.Collections.Generic;\r\nusing UnityEngine;\r\nusing Random = UnityEngine.Random;\r\n\r\npublic class EnemyScript : MonoBehaviour\r\n{\r\n    [SerializeField] private EnemyScriptable enemyScriptable = null;\r\n    private GameObject _player;\r\n    private Rigidbody _rigidbody;\r\n    private Player player;\r\n    const float m_dropChance = 1f / 10f;\r\n    [SerializeField] private int experienceReward = 400;\r\n\r\n    public float enemyHealth;\r\n    void Start()\r\n    {\r\n        enemyScriptable.enemyColor = GetComponent<Renderer>().material.color;\r\n       _rigidbody = GetComponent<Rigidbody>();\r\n       _player = GameObject.Find(\"Player\");\r\n       enemyScriptable.enemyScale = transform.localScale;\r\n       \r\n     \r\n    }\r\n\r\n    // Update is called once per frame\r\n    void Update()\r\n    {\r\n        Vector3 lookAt = ((_player.transform.position - transform.position).normalized * enemyScriptable.enemySpeed);\r\n        _rigidbody.AddForce(lookAt);\r\n\r\n        if (transform.position.y < -10)\r\n        {\r\n            Destroy(gameObject); \r\n            \r\n        }\r\n\r\n        \r\n    }\r\n    private void OnCollisionEnter(Collision collision)\r\n    {\r\n        //Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);\r\n       \r\n    }\r\n\r\n    private void OnCollisionStay(Collision collisionInfo)\r\n    {\r\n        if (collisionInfo.gameObject == _player)\r\n        {\r\n            Attack();\r\n        }\r\n    }\r\n\r\n    private void Attack()\r\n    {\r\n        if (player == null)\r\n        {\r\n            player = _player.GetComponent<Player>();\r\n            \r\n          \r\n        }\r\n        player.TakeDamage(enemyScriptable.enemyDamage);\r\n    }\r\n\r\n    public void TakenDamage(float damage)\r\n    {\r\n        enemyHealth -= damage;\r\n\r\n        if (enemyHealth <= 1)\r\n        {\r\n            _player.GetComponent<Level>().AddExperience(experienceReward);\r\n            Destroy(gameObject);\r\n            Drop();\r\n            \r\n        }\r\n        \r\n    }\r\n\r\n    private void Drop()\r\n    {\r\n        if (Random.Range(0f, 1f) <= m_dropChance)\r\n        {\r\n            Instantiate(enemyScriptable.dropObject, transform.position, transform.rotation);\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Scripts/EnemyScripts/EnemyScript.cs b/Assets/Scripts/EnemyScripts/EnemyScript.cs
+--- a/Assets/Scripts/EnemyScripts/EnemyScript.cs	
++++ b/Assets/Scripts/EnemyScripts/EnemyScript.cs	
+@@ -12,6 +12,7 @@
+     private Player player;
+     const float m_dropChance = 1f / 10f;
+     [SerializeField] private int experienceReward = 400;
++    
+ 
+     public float enemyHealth;
+     void Start()
+@@ -40,7 +41,7 @@
+     }
+     private void OnCollisionEnter(Collision collision)
+     {
+-        //Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
++        Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
+        
+     }
+ 
+Index: .idea/.idea.HyperShooter/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"de74e839-5c23-410e-ad13-17bcc2e8ee14\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave4.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave4.asset\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave5.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave5.asset\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave6.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave6.asset\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/WaveTree.asset\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Assets/Scripts/SpawnScripts/WaveTree.asset\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"main\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/Assets/Scripts/UIScripts/BarStatus.cs\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2NeRQgzZddyAzp6s1xVn8xoG7ah\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;rider.external.source.directories&quot;: [\r\n      &quot;C:\\\\Users\\\\karah\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2022.3\\\\resharper-host\\\\DecompilerCache&quot;,\r\n      &quot;C:\\\\Users\\\\karah\\\\AppData\\\\Roaming\\\\JetBrains\\\\Rider2022.3\\\\resharper-host\\\\SourcesCache&quot;,\r\n      &quot;C:\\\\Users\\\\karah\\\\AppData\\\\Local\\\\Symbols\\\\src&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RunManager\" selected=\"Attach to Unity Editor.Attach to Unity Editor\">\r\n    <configuration name=\"Start Unity\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.30f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-projectPath C:\\Users\\karah\\HyperShooter -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"C:\\Users\\karah\\HyperShooter\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"UnitTests (batch mode)\" type=\"RunUnityExe\" factoryName=\"Unity Executable\">\r\n      <option name=\"EXE_PATH\" value=\"C:\\Program Files\\Unity\\Hub\\Editor\\2020.3.30f1\\Editor\\Unity.exe\" />\r\n      <option name=\"PROGRAM_PARAMETERS\" value=\"-runTests -batchmode -projectPath C:\\Users\\karah\\HyperShooter -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"C:\\Users\\karah\\HyperShooter\" />\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"1\" />\r\n      <option name=\"USE_EXTERNAL_CONSOLE\" value=\"0\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor &amp; Play\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"UNITY_ATTACH_AND_PLAY\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n    <configuration name=\"Attach to Unity Editor\" type=\"UNITY_DEBUG_RUN_CONFIGURATION\" factoryName=\"Unity Debug\" show_console_on_std_err=\"false\" show_console_on_std_out=\"false\" port=\"50000\" address=\"localhost\">\r\n      <option name=\"allowRunningInParallel\" value=\"false\" />\r\n      <option name=\"listenPortForConnections\" value=\"false\" />\r\n      <option name=\"pid\" />\r\n      <option name=\"projectPathOnTarget\" />\r\n      <option name=\"selectedOptions\">\r\n        <list />\r\n      </option>\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"de74e839-5c23-410e-ad13-17bcc2e8ee14\" name=\"Changes\" comment=\"\" />\r\n      <created>1680022547863</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1680022547863</updated>\r\n      <workItem from=\"1680022551349\" duration=\"2867000\" />\r\n      <workItem from=\"1680255603317\" duration=\"8406000\" />\r\n      <workItem from=\"1680287726308\" duration=\"3275000\" />\r\n      <workItem from=\"1680361624629\" duration=\"7236000\" />\r\n      <workItem from=\"1680436671179\" duration=\"3720000\" />\r\n      <workItem from=\"1680448607866\" duration=\"8489000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"true\" />\r\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"EditMode\" />\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"CharacterHPEXP\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.HyperShooter/.idea/workspace.xml b/.idea/.idea.HyperShooter/.idea/workspace.xml
+--- a/.idea/.idea.HyperShooter/.idea/workspace.xml	
++++ b/.idea/.idea.HyperShooter/.idea/workspace.xml	
+@@ -3,10 +3,8 @@
+   <component name="ChangeListManager">
+     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
+       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave4.asset" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave5.asset" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/Wave6.asset" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/WaveTree.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SpawnScripts/WaveTree.asset" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyScript.cs" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyScriptable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyScriptable.cs" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -99,6 +97,7 @@
+       <workItem from="1680361624629" duration="7236000" />
+       <workItem from="1680436671179" duration="3720000" />
+       <workItem from="1680448607866" duration="8489000" />
++      <workItem from="1680461311911" duration="1356000" />
+     </task>
+     <servers />
+   </component>
+@@ -118,7 +117,7 @@
+                   <entry key="branch">
+                     <value>
+                       <list>
+-                        <option value="CharacterHPEXP" />
++                        <option value="origin/main" />
+                       </list>
+                     </value>
+                   </entry>

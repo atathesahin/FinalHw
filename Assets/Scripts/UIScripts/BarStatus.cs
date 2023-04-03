@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,14 @@ using UnityEngine.UI;
 public class BarStatus : MonoBehaviour
 {
     [SerializeField] private Image bar;
-
+    
+   
+    
     public void SetState(float current, float max)
     {
+        
+        
+        
 
         var state = current;
         bar.fillAmount = current / max;
