@@ -10,6 +10,8 @@ public class Level : MonoBehaviour
     [SerializeField] Experience _experience;
     private Player _player;
     private float _maxHealth;
+    private float increaseDamage;
+    private EnemyScriptable _enemyScriptable;
     
     int TO_LEVEL_UP
     {

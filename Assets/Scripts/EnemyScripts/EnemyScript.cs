@@ -75,7 +75,10 @@ public class EnemyScript : MonoBehaviour
             Drop();
             
         }
-        
+        else
+        {
+            
+        }
     }
 
     private void Drop()
