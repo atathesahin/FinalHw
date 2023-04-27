@@ -9,7 +9,7 @@ public class EnemyScriptable : ScriptableObject
 {
     
     public Color enemyColor = Color.white;
-    public float enemySpeed = 5;
+    //public float enemySpeed = 5;
     public Vector3 enemyScale = Vector3.one;
     public string enemyName = "Type";
     //public ParticleSystem explosion;

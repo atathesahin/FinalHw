@@ -10,8 +10,6 @@ public class MainManager : MonoBehaviour
     [SerializeField] private GameObject backMenu;
     [SerializeField] private GameObject image;
 
-    [SerializeField] private GameObject minimap;
-    
     public bool isPause;
 
 
@@ -34,7 +32,6 @@ public class MainManager : MonoBehaviour
                  Pause();   
             }
         }
-        MiniMap();
     }
 
     private void Pause()
@@ -47,17 +44,7 @@ public class MainManager : MonoBehaviour
             isPause = true;
 
     }
-    void MiniMap()
-    {
-        if (Input.GetKey(KeyCode.Tab))
-        {
-            minimap.gameObject.SetActive(true);
-        }
-        else
-        {
-            minimap.gameObject.SetActive(false);
-        }
-    }
+
 
     private void Resume()
     {

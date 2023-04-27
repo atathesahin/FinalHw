@@ -13,6 +13,8 @@ public class EnemyScript : MonoBehaviour
     const float MDropChance = 1f / 10f;
     [SerializeField] private int experienceReward = 400;
     public float enemyHealth;
+
+    [SerializeField] float enemySpeed;
     void Start()
     {
         enemyScriptable.enemyColor = GetComponent<Renderer>().material.color;
@@ -26,7 +28,7 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 lookAt = ((_player.transform.position - transform.position).normalized * enemyScriptable.enemySpeed);
+        Vector3 lookAt = ((_player.transform.position - transform.position).normalized * enemySpeed);
         _rigidbody.AddForce(lookAt);
 
         if (transform.position.y < -10)
