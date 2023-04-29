@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: NormalEnemy
   m_EditorClassIdentifier: 
   enemyColor: {r: 1, g: 1, b: 1, a: 1}
-  enemySpeed: 5
   enemyScale: {x: 2, y: 2, z: 2}
   enemyName: Bub
   enemyDamage: 1

@@ -143,4 +143,4 @@ MonoBehaviour:
   enemyScriptable: {fileID: 11400000, guid: d0b19e13da15f2148b12f704be702a14, type: 2}
   experienceReward: 3250
   enemyHealth: 20
-  enemySpeed: 0
+  enemySpeed: 1

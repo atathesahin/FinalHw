@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
     {
         gameObject.transform.position = transform.position;
         healthText.text = currentHp + "/" + maxHp.ToString();
-        HandleShoot();
+        //HandleShoot();
         
         HealReg();
           
@@ -91,6 +91,7 @@ public class Player : MonoBehaviour
         
     }
 
+   /*
     void HandleShoot()
     {
         
@@ -111,6 +112,7 @@ public class Player : MonoBehaviour
         
 
     }
+    */
 
     private void OnTriggerEnter(Collider other)
     {
