@@ -12,15 +12,14 @@ public class WeaponSystem : MonoBehaviour
     public TextMeshProUGUI ammoText;
     //public GameObject crosshair;
     private GameObject bullet;
-    public WeaponData weaponData;
+    public WeaponManager _weaponManager;
     private EnemyScript _enemyScript;
     private float nextTimeToFire = 1f;
-    public bool isAutomatic = false;
+    //public bool isAutomatic = false;
     [SerializeField] TextMeshProUGUI fireModeText;
-
-
+    
     private bool isReloading = false;
-    private int maxAmmo = 30;
+    [SerializeField] private int maxAmmo = 30;
     private float reloadTime = 1.5f;
     [SerializeField] private int currentAmmo;
     
@@ -31,7 +30,8 @@ public class WeaponSystem : MonoBehaviour
         _enemyScript = GetComponent<EnemyScript>();
         bullet = GetComponent<GameObject>();
         fireModeText = GameObject.Find("FireModeText").GetComponent<TextMeshProUGUI>();
-        //UpdateFireModeText();
+        ammoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
+        UpdateFireModeText();
         UpdateUI();
 
     }
@@ -40,17 +40,20 @@ public class WeaponSystem : MonoBehaviour
     {
 
         ReloadWeapon();
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            isAutomatic = !isAutomatic;
-            UpdateFireModeText();
-        }
+        
+        //if (Input.GetKeyDown(KeyCode.X))
+        //{
+            
+        _weaponManager.isAutomatic = !_weaponManager.isAutomatic;
+            
+        //UpdateFireModeText();
+        //}
 
     }
 
     void Shoot()
     {
-        audioSource.PlayOneShot(weaponData.fireSound);
+        audioSource.PlayOneShot(_weaponManager.fireSound);
         currentAmmo--;
         UpdateUI();
 
@@ -68,8 +71,9 @@ public class WeaponSystem : MonoBehaviour
             
         }
         */
-        bullet = Instantiate(weaponData.bulletPrefab, firePoint.position, firePoint.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = firePoint.forward * 25f;
+        bullet = Instantiate(_weaponManager.bulletPrefab, firePoint.position, firePoint.rotation);
+        //bullet.GetComponent<Rigidbody>().velocity = firePoint.forward * 25f;
+       
         /*
         if (currentAmmo <= 0)
         {
@@ -79,7 +83,7 @@ public class WeaponSystem : MonoBehaviour
     }
     void UpdateFireModeText()
     {
-        if (isAutomatic)
+        if (_weaponManager.isAutomatic)
         {
             fireModeText.text = "Automatic";
         }
@@ -112,11 +116,11 @@ public class WeaponSystem : MonoBehaviour
             return;
         }
 
-        if (isAutomatic)
+        if (_weaponManager.isAutomatic)
         {
             if (Input.GetButton("Fire1") && Time.time > nextTimeToFire)
             {
-                nextTimeToFire = Time.time + weaponData.fireRate;
+                nextTimeToFire = Time.time + _weaponManager.fireRate;
                 Shoot();
             }
         }
@@ -124,7 +128,7 @@ public class WeaponSystem : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && Time.time > nextTimeToFire)
             {
-                nextTimeToFire = Time.time + weaponData.fireRate;
+                nextTimeToFire = Time.time + _weaponManager.fireRate;
                 Shoot();
             }
         }
@@ -139,7 +143,7 @@ public class WeaponSystem : MonoBehaviour
         isReloading = false;
         UpdateUI();
     }
-
+ 
 
 
  

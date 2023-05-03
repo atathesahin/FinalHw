@@ -14,11 +14,14 @@ public class Level : MonoBehaviour
     private float _maxHealth;
     private float increaseDamage;
     private EnemyScriptable _enemyScriptable;
+    public GameObject[] weapons;
     
     
     int teleportInterval = 5;
     int specialTeleportInterval = 4;
 
+
+    private int currentWeaponIndex = 0;
     
     private int currentLevel;
     private int currentTeleportPoint = 0;
@@ -38,11 +41,13 @@ public class Level : MonoBehaviour
         _experience.UpdateExperience(currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
         _player = GetComponent<Player>();
+        UpdateWeapon();
     }
 
     private void Update()
     {
         LoopLevel();
+        ChangeWeapon();
 
     }
     void LoopLevel()
@@ -111,6 +116,30 @@ public class Level : MonoBehaviour
         {
             safeTeleportPoint = 0;
         }
+    }
+
+    void ChangeWeapon()
+    {
+        if (level >= 5 && currentWeaponIndex != 1)
+        {
+            currentWeaponIndex = 1; // ikinci silahın dizin numarası
+            UpdateWeapon();
+        }
+        else if (level >= 10 && currentWeaponIndex != 2)
+        {
+            currentWeaponIndex = 2; // üçüncü silahın dizin numarası
+            UpdateWeapon();
+        }
+    }
+    void UpdateWeapon()
+    {
+        // önceki silahı devre dışı bırakın
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        // yeni silahı etkinleştirin
+        weapons[currentWeaponIndex].SetActive(true);
     }
   
 }

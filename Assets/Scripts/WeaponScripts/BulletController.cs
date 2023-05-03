@@ -5,11 +5,17 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
+    private WeaponManager _weaponManager;
     public float bulletLifetime = 3f;
     
-    [SerializeField] float bulletDamage = 10f;
+    public float bulletDamage = 10f;
     private float currentLifetime = 0f;
-    
+    private Rigidbody _rigidbody;
+
+    private void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
@@ -21,6 +27,8 @@ public class BulletController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        _rigidbody.velocity = transform.forward * 25f;
     }
 
     void OnCollisionEnter(Collision collision)

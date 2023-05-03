@@ -12,10 +12,10 @@ public class Player : MonoBehaviour
     private Ray _ray;
 
     //[SerializeField] private Transform _point;
-    [SerializeField] private GameObject _prefab;
+    //[SerializeField] private GameObject _prefab;
     
     [SerializeField] private ParticleSystem speedSystem;
-    [SerializeField] private ParticleSystem explosionSystem;
+    //[SerializeField] private ParticleSystem explosionSystem;
     
    
     private bool isDead;
@@ -181,6 +181,5 @@ public class Player : MonoBehaviour
         
         
     }
-    
-    
+
 }
