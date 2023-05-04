@@ -9,21 +9,24 @@ public class BulletController : MonoBehaviour
     public float bulletLifetime = 3f;
     
     public float bulletDamage = 10f;
-    private float currentLifetime = 0f;
+    private float _currentLifetime = 0f;
     private Rigidbody _rigidbody;
+    private TrailRenderer _trail;
 
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
+        _trail = GetComponent<TrailRenderer>();
+
     }
 
     void Update()
     {
-        currentLifetime += Time.deltaTime;
+        _currentLifetime += Time.deltaTime;
         
         //transform.Translate(Vector3.forward * (bulletSpeed * Time.deltaTime));
         
-        if (currentLifetime >= bulletLifetime)
+        if (_currentLifetime >= bulletLifetime)
         {
             Destroy(gameObject);
         }

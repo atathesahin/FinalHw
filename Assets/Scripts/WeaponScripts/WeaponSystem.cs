@@ -15,7 +15,7 @@ public class WeaponSystem : MonoBehaviour
     public WeaponManager _weaponManager;
     private EnemyScript _enemyScript;
     private float nextTimeToFire = 1f;
-    //public bool isAutomatic = false;
+    [SerializeField] private bool isAutomatic = false;
     [SerializeField] TextMeshProUGUI fireModeText;
     
     private bool isReloading = false;
@@ -44,7 +44,7 @@ public class WeaponSystem : MonoBehaviour
         //if (Input.GetKeyDown(KeyCode.X))
         //{
             
-        _weaponManager.isAutomatic = !_weaponManager.isAutomatic;
+        //isAutomatic = !isAutomatic;
             
         //UpdateFireModeText();
         //}
@@ -83,7 +83,7 @@ public class WeaponSystem : MonoBehaviour
     }
     void UpdateFireModeText()
     {
-        if (_weaponManager.isAutomatic)
+        if (isAutomatic)
         {
             fireModeText.text = "Automatic";
         }
@@ -116,7 +116,7 @@ public class WeaponSystem : MonoBehaviour
             return;
         }
 
-        if (_weaponManager.isAutomatic)
+        if (isAutomatic)
         {
             if (Input.GetButton("Fire1") && Time.time > nextTimeToFire)
             {

@@ -12,6 +12,6 @@ public class WeaponManager : ScriptableObject
     //public float damage = 10f;
     public GameObject bulletPrefab;
     public AudioClip fireSound;
-    public bool isAutomatic = false;
+    //public bool isAutomatic = false;
 
 }

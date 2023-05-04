@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -8,7 +5,7 @@ public class Level : MonoBehaviour
     [SerializeField] Transform[] teleportPoints;
     [SerializeField] Transform[] safeTeleport;
     public int level = 1;
-    [SerializeField] private int currentExperience = 0;
+    [SerializeField] private int _currentExperience = 0;
     [SerializeField] Experience _experience;
     private Player _player;
     private float _maxHealth;
@@ -38,7 +35,7 @@ public class Level : MonoBehaviour
 
     private void Start()
     {
-        _experience.UpdateExperience(currentExperience,TO_LEVEL_UP);
+        _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
         _player = GetComponent<Player>();
         UpdateWeapon();
@@ -72,16 +69,16 @@ public class Level : MonoBehaviour
 
     public void AddExperience(int amount)
     {
-        currentExperience += amount;
+        _currentExperience += amount;
         CheckLevelUp();
-        _experience.UpdateExperience(currentExperience,TO_LEVEL_UP);
+        _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
     }
 
     private void CheckLevelUp()
     {
-        if (currentExperience >= TO_LEVEL_UP)
+        if (_currentExperience >= TO_LEVEL_UP)
         {
-            currentExperience -= TO_LEVEL_UP;
+            _currentExperience -= TO_LEVEL_UP;
             level += 1;
             _maxHealth = GetComponent<Player>().maxHp += 10;
             _experience.SetLevelText(level);
