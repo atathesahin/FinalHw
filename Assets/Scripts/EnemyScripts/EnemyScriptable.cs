@@ -12,9 +12,8 @@ public class EnemyScriptable : ScriptableObject
     //public float enemySpeed = 5;
     public Vector3 enemyScale = Vector3.one;
     public string enemyName = "Type";
-    //public ParticleSystem explosion;
     public int enemyDamage;
     public GameObject dropObject;
     public float dropChance;
-    public ParticleSystem explosion;
+
 }

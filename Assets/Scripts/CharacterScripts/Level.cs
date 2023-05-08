@@ -7,7 +7,7 @@ public class Level : MonoBehaviour
     public int level = 1;
     [SerializeField] private int _currentExperience = 0;
     [SerializeField] Experience _experience;
-    private Player _player;
+    private PlayerMovement _player;
     private float _maxHealth;
     private float increaseDamage;
     private EnemyScriptable _enemyScriptable;
@@ -37,7 +37,7 @@ public class Level : MonoBehaviour
     {
         _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
-        _player = GetComponent<Player>();
+        _player = GetComponent<PlayerMovement>();
         UpdateWeapon();
     }
 
@@ -80,7 +80,7 @@ public class Level : MonoBehaviour
         {
             _currentExperience -= TO_LEVEL_UP;
             level += 1;
-            _maxHealth = GetComponent<Player>().maxHp += 10;
+            _maxHealth = GetComponent<PlayerMovement>().maxHp += 10;
             _experience.SetLevelText(level);
         }
     }
@@ -128,15 +128,21 @@ public class Level : MonoBehaviour
             UpdateWeapon();
         }
     }
+
     void UpdateWeapon()
     {
-        // önceki silahı devre dışı bırakın
-        foreach (Transform child in transform)
+        GameObject currentWeapon = weapons[currentWeaponIndex];
+
+        // Tüm silahların bulunduğu parent GameObject referansını alın
+        GameObject weaponParent = currentWeapon.transform.parent.gameObject;
+
+        // Tüm child objeleri devre dışı bırakın
+        foreach (Transform child in weaponParent.transform)
         {
             child.gameObject.SetActive(false);
         }
-        // yeni silahı etkinleştirin
-        weapons[currentWeaponIndex].SetActive(true);
+
+        // Aktif silahı etkinleştirin
+        currentWeapon.SetActive(true);
     }
-  
 }

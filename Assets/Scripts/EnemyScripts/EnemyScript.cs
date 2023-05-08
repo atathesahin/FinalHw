@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,7 +6,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private EnemyScriptable enemyScriptable = null;
     private GameObject _player;
     private Rigidbody _rigidbody;
-    private Player player;
+    private PlayerMovement player;
     const float MDropChance = 1f / 10f;
     [SerializeField] private int experienceReward = 400;
     public float enemyHealth;
@@ -39,12 +36,6 @@ public class EnemyScript : MonoBehaviour
 
         
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Instantiate(enemyScriptable.explosion, transform.position, enemyScriptable.explosion.transform.rotation);
-       
-    }
-
     private void OnCollisionStay(Collision collisionInfo)
     {
         if (collisionInfo.gameObject == _player)
@@ -59,7 +50,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (player == null)
         {
-            player = _player.GetComponent<Player>();
+            player = _player.GetComponent<PlayerMovement>();
             
           
         }
