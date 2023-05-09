@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,17 +8,18 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     private Animator _animator;
-
+    
     //[SerializeField] private Transform target;
     private GameObject _player;
     private NavMeshAgent _agent;
     public float distance;
     private PlayerMovement player;
     [SerializeField] private int experienceReward = 2500;
-    [SerializeField] private int enemyDamage;
+    [SerializeField] private float enemyDamage = 10;
     [SerializeField] private float enemyHealth = 50;
     
     //
+    private BoxCollider _boxCollider;
    
     void Start()
     {
@@ -25,7 +27,7 @@ public class EnemyController : MonoBehaviour
         _player = GameObject.Find("Player");
         _animator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
-    
+        _boxCollider = GetComponentInChildren<BoxCollider>();
 
 
     }
@@ -40,31 +42,31 @@ public class EnemyController : MonoBehaviour
         if (distance <= 10)
         {
             _agent.enabled = true;
-        }   
-        
-        
+        }
 
-    }
-    private void OnCollisionStay(Collision collisionInfo)
-    {
-        if (collisionInfo.gameObject == _player)
+        if (distance <= 3)
         {
-           
             Attack();
-         
-
         }
     }
 
-    private void Attack()
-    {
-        if (player == null)
+     private void OnTriggerEnter(Collider other)
+     { 
+         var player = other.GetComponent<PlayerMovement>();
+        if (player != null)
         {
-            player = _player.GetComponent<PlayerMovement>();
             
+            player.TakeDamage(enemyDamage);
           
         }
-        player.TakeDamage(enemyDamage);
+        
+      
+    }
+
+    void Attack()
+    {
+        _animator.SetTrigger("Attack");
+        _agent.SetDestination(transform.position);
     }
 
     public void TakenDamage(float damage)
@@ -79,6 +81,16 @@ public class EnemyController : MonoBehaviour
             
         }
         
+    }
+
+    void EnableAttack()
+    {
+        _boxCollider.enabled = true;
+    }
+
+    void DisableAttack()
+    {
+        _boxCollider.enabled = false;
     }
 
 
