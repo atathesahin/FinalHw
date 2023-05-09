@@ -17,9 +17,10 @@ public class WeaponSystem : MonoBehaviour
     private float nextTimeToFire = 1f;
     [SerializeField] private bool isAutomatic = false;
     [SerializeField] TextMeshProUGUI fireModeText;
+    
     [SerializeField] TextMeshProUGUI weaponNameText;
     [SerializeField] private string weaponName;
-    
+
     private bool isReloading = false;
     [SerializeField] private int maxAmmo = 30;
     private float reloadTime = 1.5f;
@@ -31,6 +32,7 @@ public class WeaponSystem : MonoBehaviour
     {
         _enemyScript = GetComponent<EnemyScript>();
         bullet = GetComponent<GameObject>();
+
         fireModeText = GameObject.Find("FireModeText").GetComponent<TextMeshProUGUI>();
         ammoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
         weaponNameText = GameObject.Find("WeaponText").GetComponent<TextMeshProUGUI>();

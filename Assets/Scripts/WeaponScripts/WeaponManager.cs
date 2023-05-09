@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Weapon Type",menuName = "Weapon Type")]
@@ -11,6 +9,8 @@ public class WeaponManager : ScriptableObject
     //public float damage = 10f;
     public GameObject bulletPrefab;
     public AudioClip fireSound;
+
+    //public GameObject weaponInformation;
     //public bool isAutomatic = false;
 
 }

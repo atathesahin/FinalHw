@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Rifle Idle (1).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Rifle Idle (1).fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Walk Forward.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Walk Forward.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Walk Left.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Walk Left.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Walk Right.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/lowpolyCharacter@Walk Right.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/textures/CharacterController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/textures/CharacterController.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/fire.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/AK.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/AK.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/BulletController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +125,7 @@
       <workItem from="1683550025948" duration="891000" />
       <workItem from="1683576314288" duration="4175000" />
       <workItem from="1683622082494" duration="3763000" />
+      <workItem from="1683634156449" duration="359000" />
     </task>
     <servers />
   </component>
