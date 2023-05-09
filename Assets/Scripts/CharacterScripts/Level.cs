@@ -131,18 +131,17 @@ public class Level : MonoBehaviour
 
     void UpdateWeapon()
     {
-        GameObject currentWeapon = weapons[currentWeaponIndex];
+        GameObject weaponParent = transform.Find("WeaponHolder").gameObject;
 
-        // Tüm silahların bulunduğu parent GameObject referansını alın
-        GameObject weaponParent = currentWeapon.transform.parent.gameObject;
 
-        // Tüm child objeleri devre dışı bırakın
-        foreach (Transform child in weaponParent.transform)
+        weaponParent.SetActive(false);
+
+        foreach (Transform child in transform)
         {
-            child.gameObject.SetActive(false);
+            child.gameObject.SetActive(true);  
+            
         }
 
-        // Aktif silahı etkinleştirin
-        currentWeapon.SetActive(true);
+        weapons[currentWeaponIndex].SetActive(true);;
     }
 }

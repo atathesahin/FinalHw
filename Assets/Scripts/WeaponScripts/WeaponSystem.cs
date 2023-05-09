@@ -17,13 +17,15 @@ public class WeaponSystem : MonoBehaviour
     private float nextTimeToFire = 1f;
     [SerializeField] private bool isAutomatic = false;
     [SerializeField] TextMeshProUGUI fireModeText;
+    [SerializeField] TextMeshProUGUI weaponNameText;
+    [SerializeField] private string weaponName;
     
     private bool isReloading = false;
     [SerializeField] private int maxAmmo = 30;
     private float reloadTime = 1.5f;
     [SerializeField] private int currentAmmo;
-    
-    
+    [SerializeField] private float fireRate;
+        
 
     private void Start()
     {
@@ -31,8 +33,10 @@ public class WeaponSystem : MonoBehaviour
         bullet = GetComponent<GameObject>();
         fireModeText = GameObject.Find("FireModeText").GetComponent<TextMeshProUGUI>();
         ammoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
+        weaponNameText = GameObject.Find("WeaponText").GetComponent<TextMeshProUGUI>();
         UpdateFireModeText();
         UpdateUI();
+        WeaponName();
 
     }
 
@@ -98,6 +102,11 @@ public class WeaponSystem : MonoBehaviour
         ammoText.text = string.Format("{0}/{1}", currentAmmo, maxAmmo);
     }
 
+    void WeaponName()
+    {
+        weaponNameText.text = weaponName;
+    }
+
     void ReloadWeapon()
     {
         if (isReloading)
@@ -120,7 +129,7 @@ public class WeaponSystem : MonoBehaviour
         {
             if (Input.GetButton("Fire1") && Time.time > nextTimeToFire)
             {
-                nextTimeToFire = Time.time + _weaponManager.fireRate;
+                nextTimeToFire = Time.time + fireRate;
                 Shoot();
             }
         }
@@ -128,7 +137,7 @@ public class WeaponSystem : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1") && Time.time > nextTimeToFire)
             {
-                nextTimeToFire = Time.time + _weaponManager.fireRate;
+                nextTimeToFire = Time.time + fireRate;
                 Shoot();
             }
         }

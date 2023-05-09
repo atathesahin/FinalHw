@@ -9,6 +9,7 @@ public class BulletController : MonoBehaviour
     public float bulletLifetime = 3f;
     
     public float bulletDamage = 10f;
+    [SerializeField] private float bulletSpeed;
     private float _currentLifetime = 0f;
     private Rigidbody _rigidbody;
     private TrailRenderer _trail;
@@ -31,7 +32,7 @@ public class BulletController : MonoBehaviour
             Destroy(gameObject);
         }
 
-        _rigidbody.velocity = transform.forward * 25f;
+        _rigidbody.velocity = transform.forward * bulletSpeed;
     }
 
     void OnCollisionEnter(Collision collision)

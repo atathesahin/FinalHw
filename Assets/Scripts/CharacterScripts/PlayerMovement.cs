@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Vector3 = UnityEngine.Vector3;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -48,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
             movement.Normalize();
             movement *= _speed * Time.deltaTime;
             transform.Translate(movement,Space.World);
+    
         }
-
         float velocityZ = Vector3.Dot(movement.normalized, transform.forward);
         float velocityX = Vector3.Dot(movement.normalized, transform.right);
         
@@ -107,4 +108,6 @@ public class PlayerMovement : MonoBehaviour
         
         
     }
+    
+ 
 }

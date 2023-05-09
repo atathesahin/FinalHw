@@ -132,6 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletLifetime: 2
   bulletDamage: 10
+  bulletSpeed: 35
 --- !u!96 &-6903495413950084318
 TrailRenderer:
   serializedVersion: 2
