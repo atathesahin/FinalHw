@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+
+using Random = UnityEngine.Random;
 
 public class WeaponSystem : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class WeaponSystem : MonoBehaviour
     //public GameObject crosshair;
     private GameObject bullet;
     public WeaponManager _weaponManager;
-    private EnemyScript _enemyScript;
     private float nextTimeToFire = 1f;
     [SerializeField] private bool isAutomatic = false;
     [SerializeField] TextMeshProUGUI fireModeText;
@@ -26,26 +24,35 @@ public class WeaponSystem : MonoBehaviour
     private float reloadTime = 1.5f;
     [SerializeField] private int currentAmmo;
     [SerializeField] private float fireRate;
-        
+   
+    //
+    public Transform weaponTransform;
+    public float fireShakeAmount = 0.1f;
+    public float fireShakeDuration = 0.1f;
 
+    private Quaternion weaponOriginRotation;
+    //
     private void Start()
     {
-        _enemyScript = GetComponent<EnemyScript>();
+     
         bullet = GetComponent<GameObject>();
 
         fireModeText = GameObject.Find("FireModeText").GetComponent<TextMeshProUGUI>();
         ammoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
         weaponNameText = GameObject.Find("WeaponText").GetComponent<TextMeshProUGUI>();
+        weaponTransform = GetComponent<Transform>();
         UpdateFireModeText();
         UpdateUI();
-        WeaponName();
-
+        weaponOriginRotation = weaponTransform.localRotation;
     }
 
     void Update()
     {
-
-        ReloadWeapon();
+            
+            ReloadWeapon();
+        
+       
+        
         
         //if (Input.GetKeyDown(KeyCode.X))
         //{
@@ -102,13 +109,10 @@ public class WeaponSystem : MonoBehaviour
     void UpdateUI()
     {
         ammoText.text = string.Format("{0}/{1}", currentAmmo, maxAmmo);
-    }
-
-    void WeaponName()
-    {
         weaponNameText.text = weaponName;
     }
 
+   
     void ReloadWeapon()
     {
         if (isReloading)
@@ -133,6 +137,8 @@ public class WeaponSystem : MonoBehaviour
             {
                 nextTimeToFire = Time.time + fireRate;
                 Shoot();
+                StartCoroutine(FireShake());
+      
             }
         }
         else
@@ -141,8 +147,11 @@ public class WeaponSystem : MonoBehaviour
             {
                 nextTimeToFire = Time.time + fireRate;
                 Shoot();
+                StartCoroutine(FireShake());
+       
             }
         }
+        
 
     }
     IEnumerator Reload()
@@ -154,7 +163,26 @@ public class WeaponSystem : MonoBehaviour
         isReloading = false;
         UpdateUI();
     }
- 
+    IEnumerator FireShake()
+    {
+        float elapsed = 0.0f;
+
+        while (elapsed < fireShakeDuration)
+        {
+            elapsed += Time.deltaTime;
+
+            float percentComplete = elapsed / fireShakeDuration;
+            float damper = 1.0f - Mathf.Clamp(4.0f * percentComplete - 3.0f, 0.0f, 1.0f);
+            float alpha = Random.value * 2.0f - 1.0f;
+            Quaternion shake = Quaternion.Euler(0.0f, 0.0f, alpha * fireShakeAmount * damper);
+
+            weaponTransform.localRotation = weaponOriginRotation * shake;
+
+            yield return null;
+        }
+
+        weaponTransform.localRotation = weaponOriginRotation;
+    }
 
 
  

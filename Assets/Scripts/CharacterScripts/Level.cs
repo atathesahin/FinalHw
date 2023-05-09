@@ -117,12 +117,12 @@ public class Level : MonoBehaviour
 
     void ChangeWeapon()
     {
-        if (level >= 5 && currentWeaponIndex != 1)
+        if (level >= 4 && currentWeaponIndex != 1)
         {
             currentWeaponIndex = 1; // ikinci silahın dizin numarası
             UpdateWeapon();
         }
-        else if (level >= 10 && currentWeaponIndex != 2)
+        else if (level >= 8 && currentWeaponIndex != 2)
         {
             currentWeaponIndex = 2; // üçüncü silahın dizin numarası
             UpdateWeapon();

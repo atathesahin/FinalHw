@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - WayPoints
   - Powerup
+  - Safe
   layers:
   - Default
   - TransparentFX

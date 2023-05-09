@@ -13,7 +13,6 @@ public class BulletController : MonoBehaviour
     private float _currentLifetime = 0f;
     private Rigidbody _rigidbody;
     private TrailRenderer _trail;
-
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
@@ -39,10 +38,11 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            EnemyScript enemyHealth = collision.gameObject.GetComponent<EnemyScript>();
+            EnemyController enemyHealth = collision.gameObject.GetComponent<EnemyController>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakenDamage(bulletDamage);
+            
             }
         }
         Destroy(gameObject);

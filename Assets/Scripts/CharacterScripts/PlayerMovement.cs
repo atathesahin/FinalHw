@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public float currentHp = 100;
     private float healTime;
     private float hpReg = 0.1f;
+
+    
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
@@ -78,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         _status.SetState(currentHp,maxHp);
     }
 
-  
+    
 
     private void Heal(int amount)
     {
@@ -108,6 +111,4 @@ public class PlayerMovement : MonoBehaviour
         
         
     }
-    
- 
 }
