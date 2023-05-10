@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CameraScript : MonoBehaviour
 {
+
     public static CameraScript Instance // singlton     
     {
         get
@@ -21,6 +22,7 @@ public class CameraScript : MonoBehaviour
             return instance;
         }
     }
+
     private static CameraScript instance;
 
     public GameObject Player;

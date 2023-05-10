@@ -8,7 +8,7 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody _rigidbody;
     private PlayerMovement player;
     const float MDropChance = 1f / 10f;
-    [SerializeField] private int experienceReward = 400;
+    public int experienceReward = 400;
     public float enemyHealth;
 
     [SerializeField] float enemySpeed;

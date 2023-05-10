@@ -14,13 +14,17 @@ public class EnemyController : MonoBehaviour
     private NavMeshAgent _agent;
     public float distance;
     private PlayerMovement player;
-    [SerializeField] private int experienceReward = 2500;
+    public int experienceReward;
     [SerializeField] private float enemyDamage = 10;
-    [SerializeField] private float enemyHealth = 50;
+    public float _enemyHealth = 50;
     
     //
     private BoxCollider _boxCollider;
-   
+    
+    //
+    private CapsuleCollider _capsuleCollider;
+    private bool isDead = false;
+    
     void Start()
     {
         player = GetComponent<PlayerMovement>();
@@ -28,6 +32,7 @@ public class EnemyController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _agent = GetComponent<NavMeshAgent>();
         _boxCollider = GetComponentInChildren<BoxCollider>();
+        _capsuleCollider = GetComponent<CapsuleCollider>();
 
 
     }
@@ -35,19 +40,43 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _animator.SetFloat("speed",_agent.velocity.magnitude);
-        distance = Vector3.Distance(transform.position, _player.transform.position);
-        _agent.destination = _player.transform.position;
+        if (isDead == false)
+        {
+            Movement();
+        }
 
+        
+    }
+
+    void Movement()
+    {
+        _animator.SetFloat("speed",_agent.velocity.magnitude);
+        var position = _player.transform.position;
+        distance = Vector3.Distance(transform.position, position);
+        _agent.destination = position;
+
+        if (distance >= 35)
+        {
+            _agent.isStopped = true;
+         
+        }
         if (distance <= 10)
         {
             _agent.enabled = true;
+   
         }
-
-        if (distance <= 3)
+   
+        if (distance <= 3.5)
         {
             Attack();
+   
+
         }
+    }
+    void Die()
+    {
+        _animator.SetTrigger("Death");
+        Destroy(gameObject, 4f);
     }
 
      private void OnTriggerEnter(Collider other)
@@ -65,24 +94,33 @@ public class EnemyController : MonoBehaviour
 
     void Attack()
     {
-        _animator.SetTrigger("Attack");
-        _agent.SetDestination(transform.position);
+   
+            _animator.SetTrigger("Attack");
+            _agent.SetDestination(transform.position);
+     
+
     }
 
     public void TakenDamage(float damage)
     {
-        enemyHealth -= damage;
+        _animator.SetTrigger("Hit");
+        _enemyHealth -= damage;
 
-        if (enemyHealth <= 1)
+        if (_enemyHealth <= 0)
         {
             _player.GetComponent<Level>().AddExperience(experienceReward);
-            Destroy(gameObject);
-    
-            
+            Die();
+            EnableCollider();
+            isDead = true;
+
         }
         
     }
 
+    void EnableCollider()
+    {
+        _capsuleCollider.enabled = false;
+    }
     void EnableAttack()
     {
         _boxCollider.enabled = true;
@@ -92,11 +130,4 @@ public class EnemyController : MonoBehaviour
     {
         _boxCollider.enabled = false;
     }
-
-
-    
-    
-    
-    
-
 }

@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Start()
     {
+
         _status.SetState(currentHp,maxHp);
         _status.GetComponent<BarStatus>();
     }
@@ -37,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
         Movement();
         HealReg();
 
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            _animator.SetTrigger("isAttacking");
+        }
       
     }
 
@@ -73,6 +78,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        _animator.SetTrigger("Hit");
         currentHp -= damage;
         if (currentHp <= 0)
         {

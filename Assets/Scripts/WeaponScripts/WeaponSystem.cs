@@ -29,9 +29,9 @@ public class WeaponSystem : MonoBehaviour
     public Transform weaponTransform;
     public float fireShakeAmount = 0.1f;
     public float fireShakeDuration = 0.1f;
-
+    
     private Quaternion weaponOriginRotation;
-    //
+    
     private void Start()
     {
      
@@ -50,7 +50,7 @@ public class WeaponSystem : MonoBehaviour
     {
             
             ReloadWeapon();
-        
+         
        
         
         

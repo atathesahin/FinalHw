@@ -6,19 +6,30 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    //[SerializeField] private GameObject pause;
-    //[SerializeField] private GameObject backMenu;
-    [SerializeField] private GameObject image;
+    public static MainManager Instance   
+    {
+        get
+        {
+            if ( instance == null )
+            {
+                instance = FindObjectOfType<MainManager> ( );
+                if ( instance == null )
+                {
+                    var instanceContainer = new GameObject ( "UiController" );
+                    instance = instanceContainer.AddComponent<MainManager> ( );
+                }
+            }
+            return instance;
+        }
+    }
+    private static MainManager instance;
+    [SerializeField]private GameObject pause;
+    [SerializeField]private GameObject backMenu;
+    //[SerializeField] private GameObject image;
 
     public bool isPause;
-    [SerializeField] private GameObject weaponUI;
 
-
-    void Start()
-    {
-       
-    }
-
+ 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -32,30 +43,28 @@ public class MainManager : MonoBehaviour
                  Pause();   
             }
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            weaponUI.SetActive(!weaponUI.activeSelf);
-        }
     }
+
 
     private void Pause()
     {
         
-            //pause.SetActive(true);
+            pause.SetActive(true);
             Time.timeScale = 0f;
-            //backMenu.SetActive(true);
-            image.SetActive(true);
+            backMenu.SetActive(true);
+            //image.SetActive(true);
             isPause = true;
 
     }
 
+    
 
     private void Resume()
     {
-        //pause.SetActive(false);
+        pause.SetActive(false);
         Time.timeScale = 1f;
-        //backMenu.SetActive(false);
-        image.SetActive(false);
+        backMenu.SetActive(false);
+        //image.SetActive(false);
         isPause = false;
 
         

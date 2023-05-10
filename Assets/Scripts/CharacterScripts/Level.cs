@@ -12,8 +12,8 @@ public class Level : MonoBehaviour
     private float increaseDamage;
     private EnemyScriptable _enemyScriptable;
     public GameObject[] weapons;
-    
-    
+
+
     int teleportInterval = 5;
     int specialTeleportInterval = 4;
 
@@ -24,6 +24,10 @@ public class Level : MonoBehaviour
     private int currentTeleportPoint = 0;
 
     private int safeTeleportPoint = 0;
+    
+    
+    //
+
     
     int TO_LEVEL_UP
     {
@@ -39,6 +43,7 @@ public class Level : MonoBehaviour
         _experience.SetLevelText(level);
         _player = GetComponent<PlayerMovement>();
         UpdateWeapon();
+ 
     }
 
     private void Update()
@@ -64,6 +69,7 @@ public class Level : MonoBehaviour
         }
 
         CameraScript.Instance.CarmeraNextRoom();
+
     }
 
 
@@ -119,21 +125,21 @@ public class Level : MonoBehaviour
     {
         if (level >= 4 && currentWeaponIndex != 1)
         {
-            currentWeaponIndex = 1; // ikinci silahın dizin numarası
+            currentWeaponIndex = 1; // 
             UpdateWeapon();
         }
         else if (level >= 8 && currentWeaponIndex != 2)
         {
-            currentWeaponIndex = 2; // üçüncü silahın dizin numarası
+            currentWeaponIndex = 2; // 
             UpdateWeapon();
         }
     }
 
     void UpdateWeapon()
     {
-        GameObject weaponParent = transform.Find("WeaponHolder").gameObject;
-
-
+        //GameObject weaponParent = transform.Find("WeaponHolder").gameObject;
+        Transform weaponHolder = transform.Find("WeaponHolder");
+     /*
         weaponParent.SetActive(false);
 
         foreach (Transform child in transform)
@@ -142,6 +148,15 @@ public class Level : MonoBehaviour
             
         }
 
-        weapons[currentWeaponIndex].SetActive(true);;
+        //weapons[currentWeaponIndex].SetActive(true);;
+
+        //weaponParent.gameObject.SetActive(false);
+        weapons[currentWeaponIndex].SetActive(true);
+        */
+        for (int i = 0; i < weaponHolder.childCount; i++)
+        {
+            weaponHolder.GetChild(i).gameObject.SetActive(false);
+        }
+        weapons[currentWeaponIndex].SetActive(true);
     }
 }

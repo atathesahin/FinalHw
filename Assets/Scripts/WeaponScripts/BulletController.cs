@@ -8,16 +8,16 @@ public class BulletController : MonoBehaviour
     private WeaponManager _weaponManager;
     public float bulletLifetime = 3f;
     
-    public float bulletDamage = 10f;
+    private float _bulletDamage = 10f;
     [SerializeField] private float bulletSpeed;
     private float _currentLifetime = 0f;
     private Rigidbody _rigidbody;
     private TrailRenderer _trail;
+    private EnemyController _enemyController;
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _trail = GetComponent<TrailRenderer>();
-
     }
 
     void Update()
@@ -41,10 +41,13 @@ public class BulletController : MonoBehaviour
             EnemyController enemyHealth = collision.gameObject.GetComponent<EnemyController>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakenDamage(bulletDamage);
+                enemyHealth.TakenDamage(_bulletDamage);
+          
             
             }
         }
         Destroy(gameObject);
     }
+  
+ 
 }
