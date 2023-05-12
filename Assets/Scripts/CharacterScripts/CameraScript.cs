@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,13 @@ public class CameraScript : MonoBehaviour
 
     private static CameraScript instance;
 
-    public GameObject Player;
+
+    private GameObject _player;
+
+    private void Start()
+    {
+        _player = GameObject.Find("Player");
+    }
 
 
     public float offsetY = 45f;
@@ -36,18 +43,23 @@ public class CameraScript : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        //cameraPosition.x = Player.transform.position.x;
-        cameraPosition.y = Player.transform.position.y + offsetY;
-        cameraPosition.z = Player.transform.position.z + offsetZ;
+            //cameraPosition.x = _player.transform.position.x;
+      
+            cameraPosition.y = _player.transform.position.y + offsetY;
+            cameraPosition.z = _player.transform.position.z + offsetZ;
 
-        transform.position = cameraPosition;
+            transform.position = cameraPosition;
+
+
+
+        
     }
 
     public void CarmeraNextRoom ( )
     {
         //Fade in/out
         
-        cameraPosition.x = Player.transform.position.x;
+        cameraPosition.x = _player.transform.position.x;
     }
 
    

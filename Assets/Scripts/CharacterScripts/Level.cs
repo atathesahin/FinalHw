@@ -42,6 +42,7 @@ public class Level : MonoBehaviour
         _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
         _player = GetComponent<PlayerMovement>();
+     
         UpdateWeapon();
  
     }
@@ -67,9 +68,7 @@ public class Level : MonoBehaviour
             SafeTeleportToNextPoint(safeTeleport);
             
         }
-
         CameraScript.Instance.CarmeraNextRoom();
-
     }
 
 
@@ -86,7 +85,7 @@ public class Level : MonoBehaviour
         {
             _currentExperience -= TO_LEVEL_UP;
             level += 1;
-            _maxHealth = GetComponent<PlayerMovement>().maxHp += 10;
+            _maxHealth = GetComponent<PlayerMovement>()._maxHp += 10;
             _experience.SetLevelText(level);
         }
     }

@@ -32,11 +32,14 @@ public class WeaponSystem : MonoBehaviour
     
     private Quaternion weaponOriginRotation;
     
+    //
+    private PlayerMovement _player;
+    private bool isDead = false;
     private void Start()
     {
      
         bullet = GetComponent<GameObject>();
-
+        //_player = GetComponent<PlayerMovement>();
         fireModeText = GameObject.Find("FireModeText").GetComponent<TextMeshProUGUI>();
         ammoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
         weaponNameText = GameObject.Find("WeaponText").GetComponent<TextMeshProUGUI>();
@@ -48,12 +51,12 @@ public class WeaponSystem : MonoBehaviour
 
     void Update()
     {
-            
+        if (isDead == false)
+        {
             ReloadWeapon();
-         
-       
-        
-        
+
+        }
+    
         //if (Input.GetKeyDown(KeyCode.X))
         //{
             
@@ -63,36 +66,17 @@ public class WeaponSystem : MonoBehaviour
         //}
 
     }
-
     void Shoot()
     {
         audioSource.PlayOneShot(_weaponManager.fireSound);
         currentAmmo--;
         UpdateUI();
 
-        /*
-        RaycastHit hit;
-        if (Physics.Raycast(firePoint.position, firePoint.forward, out hit))
-        {
-            _enemyScript = hit.collider.GetComponent<EnemyScript>();
-           //_enemyScript.TakenDamage(weaponData.damage);
-        }
         
-
-        if (hit.collider != null)
-        {
-            
-        }
-        */
         bullet = Instantiate(_weaponManager.bulletPrefab, firePoint.position, firePoint.rotation);
-        //bullet.GetComponent<Rigidbody>().velocity = firePoint.forward * 25f;
-       
-        /*
-        if (currentAmmo <= 0)
-        {
-            StartCoroutine(Reload());
-        }
-        */
+        
+   
+        
     }
     void UpdateFireModeText()
     {
@@ -111,7 +95,7 @@ public class WeaponSystem : MonoBehaviour
         ammoText.text = string.Format("{0}/{1}", currentAmmo, maxAmmo);
         weaponNameText.text = weaponName;
     }
-
+    
    
     void ReloadWeapon()
     {
@@ -184,6 +168,6 @@ public class WeaponSystem : MonoBehaviour
         weaponTransform.localRotation = weaponOriginRotation;
     }
 
-
+    
  
 }

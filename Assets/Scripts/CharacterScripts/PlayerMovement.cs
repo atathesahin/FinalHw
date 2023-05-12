@@ -14,34 +14,46 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private BarStatus _status;
     [SerializeField] Text healthText;
-    public float maxHp = 100;
-    public float currentHp = 100;
+    public float _maxHp = 100;
+    public float _currentHp = 100;
     private float healTime;
     private float hpReg = 0.1f;
 
+    //
+    public bool isDead = false;
     
+    //
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
     {
 
-        _status.SetState(currentHp,maxHp);
+        _status.SetState(_currentHp,_maxHp);
         _status.GetComponent<BarStatus>();
+    
     }
     void Update()
     {
         
         
-        gameObject.transform.position = transform.position;
-        healthText.text = currentHp + "/" + maxHp.ToString();
-        AimTowardMouse();
-        Movement();
-        HealReg();
 
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (isDead == false)
         {
-            _animator.SetTrigger("isAttacking");
+            gameObject.transform.position = transform.position;
+            healthText.text = _currentHp + "/" + _maxHp.ToString();
+            AimTowardMouse();
+            Movement();
+            HealReg();
+            if (Input.GetKey(KeyCode.Mouse0))
+            {
+                _animator.SetTrigger("isAttacking");
+                isDead = false;
+            }
         }
+       
+           
+
+       
       
     }
 
@@ -64,6 +76,8 @@ public class PlayerMovement : MonoBehaviour
         
         _animator.SetFloat("VelocityZ",velocityZ);
         _animator.SetFloat("VelocityX",velocityX);
+
+  
     }
     void AimTowardMouse()
     {
@@ -74,45 +88,50 @@ public class PlayerMovement : MonoBehaviour
             _direction.y = 0f;
             _direction.Normalize();
             transform.forward = _direction;
+            isDead = false;
         }
     }
     public void TakeDamage(float damage)
     {
         _animator.SetTrigger("Hit");
-        currentHp -= damage;
-        if (currentHp <= 0)
+        _currentHp -= damage;
+        if (_currentHp <= 0)
         {
-          
+            _animator.SetTrigger("Death");
+            isDead = true;
+            
         }
-        _status.SetState(currentHp,maxHp);
+        _status.SetState(_currentHp,_maxHp);
     }
 
     
 
     private void Heal(int amount)
     {
-        if (currentHp <= 0)
+        if (_currentHp <= 0)
         {
-            return;
+           
+            //return;
         }
 
-        currentHp += amount;
+        _currentHp += amount;
 
-        if (currentHp > maxHp)
+        if (_currentHp > _maxHp)
         {
-            currentHp = maxHp;
+            _currentHp = _maxHp;
         }
-        _status.SetState(currentHp,maxHp);
+        _status.SetState(_currentHp,_maxHp);
         
     }
 
     private void HealReg()
     {
-        if (currentHp <= 100 && Time.time > healTime)
+        if (_currentHp <= 100 && Time.time > healTime)
         {
             Heal(1);
             healTime = Time.time + hpReg;
-            
+    
+
         }
         
         

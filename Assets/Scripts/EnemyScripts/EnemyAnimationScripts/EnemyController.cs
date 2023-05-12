@@ -8,7 +8,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     private Animator _animator;
-    
+
     //[SerializeField] private Transform target;
     private GameObject _player;
     private NavMeshAgent _agent;
@@ -17,14 +17,17 @@ public class EnemyController : MonoBehaviour
     public int experienceReward;
     [SerializeField] private float enemyDamage = 10;
     public float _enemyHealth = 50;
-    
+
     //
     private BoxCollider _boxCollider;
-    
+
     //
     private CapsuleCollider _capsuleCollider;
     private bool isDead = false;
-    
+    private bool isAttack = false;
+ 
+
+
     void Start()
     {
         player = GetComponent<PlayerMovement>();
@@ -40,22 +43,27 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDead == false)
+        if (isDead == false && isAttack == false)
         {
-            Movement();
+            
+                Movement();
+                
         }
 
-        
+
     }
 
     void Movement()
     {
         _animator.SetFloat("speed",_agent.velocity.magnitude);
-        var position = _player.transform.position;
-        distance = Vector3.Distance(transform.position, position);
-        _agent.destination = position;
+        
+            var position = _player.transform.position;
+            distance = Vector3.Distance(transform.position, position);
+            _agent.destination = position;
 
-        if (distance >= 35)
+
+
+            if (distance >= 35)
         {
             _agent.isStopped = true;
          
@@ -63,16 +71,19 @@ public class EnemyController : MonoBehaviour
         if (distance <= 10)
         {
             _agent.enabled = true;
-   
+         
+
         }
    
-        if (distance <= 3.5)
+        if (distance <= 3.5f )
         {
             Attack();
-   
+     
 
         }
     }
+  
+    
     void Die()
     {
         _animator.SetTrigger("Death");
@@ -86,7 +97,12 @@ public class EnemyController : MonoBehaviour
         {
             
             player.TakeDamage(enemyDamage);
-          
+            if (player._currentHp <= 0)
+            {
+                _agent.isStopped = true;
+                isAttack = true;
+
+            }
         }
         
       
@@ -95,9 +111,10 @@ public class EnemyController : MonoBehaviour
     void Attack()
     {
    
-            _animator.SetTrigger("Attack");
-            _agent.SetDestination(transform.position);
-     
+        _animator.SetTrigger("Attack");
+        _agent.SetDestination(transform.position);
+        isAttack = false;
+      
 
     }
 
@@ -112,11 +129,11 @@ public class EnemyController : MonoBehaviour
             Die();
             EnableCollider();
             isDead = true;
-
+       
         }
         
     }
-
+    
     void EnableCollider()
     {
         _capsuleCollider.enabled = false;
