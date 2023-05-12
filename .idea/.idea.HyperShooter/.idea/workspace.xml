@@ -3,24 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/GolemAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/GolemAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/MODEL_level_4_golem (1).fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/MODEL_level_4_golem (1).fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/MODEL_level_4_golem (1)@Zombie Attack (1).fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/MODEL_level_4_golem (1)@Zombie Attack (1).fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/golemNew@Hit To Body.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/golemNew@Hit To Body.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/golemNew@Mutant Dying.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/golemNew@Mutant Dying.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/golemNew@Standing Death Forward 02.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/golemNew@Standing Death Forward 02.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character/textures/CharacterController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character/textures/CharacterController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/CameraScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/CameraScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIScripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIScripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +140,7 @@
       <workItem from="1683749088437" duration="727000" />
       <workItem from="1683798973341" duration="1633000" />
       <workItem from="1683821922596" duration="4000000" />
-      <workItem from="1683890561440" duration="5938000" />
+      <workItem from="1683890561440" duration="7295000" />
     </task>
     <servers />
   </component>
