@@ -9,4 +9,9 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Test");
     }
+
+    public void SaveLoad()
+    {
+        ES3AutoSaveMgr.Current.Load();
+    }
 }

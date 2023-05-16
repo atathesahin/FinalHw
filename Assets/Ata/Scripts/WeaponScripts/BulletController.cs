@@ -8,7 +8,7 @@ public class BulletController : MonoBehaviour
     private WeaponManager _weaponManager;
     public float bulletLifetime = 3f;
     
-    private float _bulletDamage = 10f;
+    private float _bulletDamage = 25f;
     [SerializeField] private float bulletSpeed;
     private float _currentLifetime = 0f;
     private Rigidbody _rigidbody;

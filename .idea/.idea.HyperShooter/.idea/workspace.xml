@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_2_2023_10_17_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_2_2023_10_17_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/BulletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,18 +30,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PatrolState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterScripts/CameraScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterScripts/Experience.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterScripts/Level.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveScripts/GameSaveManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIScripts/BarStatus.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIScripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponScripts/BulletController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WeaponScripts/WeaponUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MenuCharacter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -141,6 +141,10 @@
       <workItem from="1683798973341" duration="1633000" />
       <workItem from="1683821922596" duration="4000000" />
       <workItem from="1683890561440" duration="7295000" />
+      <workItem from="1684000876612" duration="4646000" />
+      <workItem from="1684058475595" duration="5693000" />
+      <workItem from="1684159124191" duration="368000" />
+      <workItem from="1684265022950" duration="6303000" />
     </task>
     <servers />
   </component>

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 using UnityEngine.SceneManagement;
@@ -29,10 +30,18 @@ public class MainManager : MonoBehaviour
 
     public bool isPause;
 
- 
+    private void Start()
+    {
+       
+    }
+
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        Menu();
+    }
+
+    void Menu()
+    {  if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPause)
             {
@@ -40,12 +49,12 @@ public class MainManager : MonoBehaviour
             }
             else
             {
-                 Pause();   
+                Pause();   
             }
         }
+        
     }
-
-
+  
     private void Pause()
     {
         
@@ -75,7 +84,13 @@ public class MainManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void Save()
+    {
+        ES3AutoSaveMgr.Current.Save();
+    }
 
-
-
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
+    }
 }

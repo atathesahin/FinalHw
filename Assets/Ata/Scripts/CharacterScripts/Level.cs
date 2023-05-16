@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -11,23 +12,18 @@ public class Level : MonoBehaviour
     private float _maxHealth;
     private float increaseDamage;
     private EnemyScriptable _enemyScriptable;
-    public GameObject[] weapons;
-
-
-    int teleportInterval = 5;
-    int specialTeleportInterval = 4;
-
-
-    private int currentWeaponIndex = 0;
     
+
+
+    int teleportInterval = 25;
+    int specialTeleportInterval = 4;
+    private int safeTeleportPoint = 0;
     private int currentLevel;
     private int currentTeleportPoint = 0;
 
-    private int safeTeleportPoint = 0;
+    public GameObject[] weapons;
+    private int currentWeaponIndex = 0;
     
-    
-    //
-
     
     int TO_LEVEL_UP
     {
@@ -42,9 +38,8 @@ public class Level : MonoBehaviour
         _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
         _player = GetComponent<PlayerMovement>();
-     
+        
         UpdateWeapon();
- 
     }
 
     private void Update()
@@ -71,6 +66,13 @@ public class Level : MonoBehaviour
         CameraScript.Instance.CarmeraNextRoom();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Safe"))
+        {
+            TeleportToNextPoint(teleportPoints);
+        }
+    }
 
     public void AddExperience(int amount)
     {
@@ -122,40 +124,46 @@ public class Level : MonoBehaviour
 
     void ChangeWeapon()
     {
+
         if (level >= 4 && currentWeaponIndex != 1)
         {
             currentWeaponIndex = 1; // 
             UpdateWeapon();
         }
-        else if (level >= 8 && currentWeaponIndex != 2)
+
+        if (level >= 8 && currentWeaponIndex != 2)
         {
             currentWeaponIndex = 2; // 
             UpdateWeapon();
         }
+        if (level >= 12 && currentWeaponIndex != 3)
+        {
+            currentWeaponIndex = 3; // 
+            UpdateWeapon();
+        }
+       
+     
     }
 
     void UpdateWeapon()
     {
-        //GameObject weaponParent = transform.Find("WeaponHolder").gameObject;
+
         Transform weaponHolder = transform.Find("WeaponHolder");
-     /*
-        weaponParent.SetActive(false);
 
-        foreach (Transform child in transform)
-        {
-            child.gameObject.SetActive(true);  
-            
-        }
 
-        //weapons[currentWeaponIndex].SetActive(true);;
-
-        //weaponParent.gameObject.SetActive(false);
-        weapons[currentWeaponIndex].SetActive(true);
-        */
         for (int i = 0; i < weaponHolder.childCount; i++)
         {
             weaponHolder.GetChild(i).gameObject.SetActive(false);
         }
         weapons[currentWeaponIndex].SetActive(true);
     }
-}
+
+/*
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            weapons[i].SetActive(i == currentWeaponIndex);
+        }
+        */
+
+    }
+
