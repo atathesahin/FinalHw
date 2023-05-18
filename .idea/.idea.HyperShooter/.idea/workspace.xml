@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="" />
+    <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Images/8751747.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Images/8751747.png.meta" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +136,7 @@
       <workItem from="1684265022950" duration="6367000" />
       <workItem from="1684315785877" duration="1778000" />
       <workItem from="1684403569765" duration="2980000" />
-      <workItem from="1684407539213" duration="1583000" />
+      <workItem from="1684407539213" duration="2520000" />
     </task>
     <servers />
   </component>
