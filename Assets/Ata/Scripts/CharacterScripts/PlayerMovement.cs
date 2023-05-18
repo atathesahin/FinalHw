@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     
     //
+
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
@@ -30,13 +31,11 @@ public class PlayerMovement : MonoBehaviour
 
         _status.SetState(_currentHp,_maxHp);
         _status.GetComponent<BarStatus>();
-    
+
+
     }
     void Update()
     {
-        
-        
-
         if (isDead == false)
         {
             gameObject.transform.position = transform.position;
@@ -46,15 +45,13 @@ public class PlayerMovement : MonoBehaviour
             HealReg();
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                _animator.SetTrigger("isAttacking");
+                //_animator.SetTrigger("isAttacking");
+                
                 isDead = false;
             }
         }
-       
-           
+        
 
-       
-      
     }
 
     void Movement()
@@ -69,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
             movement.Normalize();
             movement *= _speed * Time.deltaTime;
             transform.Translate(movement,Space.World);
-    
+
         }
         float velocityZ = Vector3.Dot(movement.normalized, transform.forward);
         float velocityX = Vector3.Dot(movement.normalized, transform.right);
@@ -99,6 +96,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _animator.SetTrigger("Death");
             isDead = true;
+            ES3.DeleteFile("AutoSave.es3");
             
         }
         _status.SetState(_currentHp,_maxHp);
@@ -133,7 +131,5 @@ public class PlayerMovement : MonoBehaviour
     
 
         }
-        
-        
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffadf17e6cc12314c808fddc8294b0fe, type: 3}
-  m_Name: MP5-SD
+  m_Name: Scar
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6969846086796150235, guid: 2719b19fd4aabfd409a9fa97dfe40748, type: 3}
+  bulletPrefab: {fileID: 1680685424975657844, guid: d5d5e5265a57b744fb729b31d100cd71, type: 3}
   fireSound: {fileID: 0}

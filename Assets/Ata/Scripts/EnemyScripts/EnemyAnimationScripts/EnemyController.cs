@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
     private bool isAttack = false;
  
 
-
+    
     void Start()
     {
         player = GetComponent<PlayerMovement>();

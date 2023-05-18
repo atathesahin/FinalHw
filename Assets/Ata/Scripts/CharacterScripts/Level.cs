@@ -125,20 +125,25 @@ public class Level : MonoBehaviour
     void ChangeWeapon()
     {
 
-        if (level >= 4 && currentWeaponIndex != 1)
+        if (level == 4 && currentWeaponIndex != 1)
         {
             currentWeaponIndex = 1; // 
             UpdateWeapon();
         }
 
-        if (level >= 8 && currentWeaponIndex != 2)
+        if (level == 8 && currentWeaponIndex != 2)
         {
             currentWeaponIndex = 2; // 
             UpdateWeapon();
         }
-        if (level >= 12 && currentWeaponIndex != 3)
+        if (level == 12 && currentWeaponIndex != 3)
         {
             currentWeaponIndex = 3; // 
+            UpdateWeapon();
+        }
+        if (level == 16 && currentWeaponIndex != 4)
+        {
+            currentWeaponIndex = 4; // 
             UpdateWeapon();
         }
        
