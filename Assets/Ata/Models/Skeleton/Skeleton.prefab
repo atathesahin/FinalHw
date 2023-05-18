@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  experienceReward: 500
+  experienceReward: 4500
   enemyDamage: 10
   _enemyHealth: 50
 --- !u!195 &919132147892696545
