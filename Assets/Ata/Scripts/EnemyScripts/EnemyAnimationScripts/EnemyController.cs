@@ -25,8 +25,9 @@ public class EnemyController : MonoBehaviour
     private CapsuleCollider _capsuleCollider;
     private bool isDead = false;
     private bool isAttack = false;
- 
-
+    //
+    //private CoinSystem _coin;
+    [SerializeField] private int _coinValue;
     
     void Start()
     {
@@ -126,6 +127,7 @@ public class EnemyController : MonoBehaviour
         if (_enemyHealth <= 0)
         {
             _player.GetComponent<Level>().AddExperience(experienceReward);
+            _player.GetComponent<CoinSystem>().AddCoin(_coinValue);
             Die();
             EnableCollider();
             isDead = true;

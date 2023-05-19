@@ -1398,6 +1398,7 @@ MonoBehaviour:
   experienceReward: 350
   enemyDamage: 10
   _enemyHealth: 50
+  _coinValue: 25
 --- !u!195 &8702327898642207958
 NavMeshAgent:
   m_ObjectHideFlags: 0

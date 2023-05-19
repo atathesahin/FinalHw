@@ -319,6 +319,7 @@ MonoBehaviour:
   experienceReward: 4500
   enemyDamage: 20
   _enemyHealth: 50
+  _coinValue: 10
 --- !u!136 &537946864
 CapsuleCollider:
   m_ObjectHideFlags: 0

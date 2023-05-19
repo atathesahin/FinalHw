@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     
     //
-
+    
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         {
             gameObject.transform.position = transform.position;
             healthText.text = _currentHp + "/" + _maxHp.ToString();
+            
             AimTowardMouse();
             Movement();
             HealReg();
@@ -132,4 +133,5 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+  
 }
