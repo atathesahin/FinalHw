@@ -146,6 +146,11 @@ public class Level : MonoBehaviour
             currentWeaponIndex = 4; // 
             UpdateWeapon();
         }
+        if (level == 20 && currentWeaponIndex != 5)
+        {
+            currentWeaponIndex = 5; // 
+            UpdateWeapon();
+        }
        
      
     }

@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             HealReg();
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                //_animator.SetTrigger("isAttacking");
+                _animator.SetTrigger("idleFire");
                 
                 isDead = false;
             }
@@ -67,7 +67,12 @@ public class PlayerMovement : MonoBehaviour
             movement.Normalize();
             movement *= _speed * Time.deltaTime;
             transform.Translate(movement,Space.World);
+            
+        }
 
+        if (movement.magnitude > 0 && Input.GetKey(KeyCode.Mouse0))
+        {
+            _animator.SetTrigger("Fire");
         }
         float velocityZ = Vector3.Dot(movement.normalized, transform.forward);
         float velocityX = Vector3.Dot(movement.normalized, transform.right);
