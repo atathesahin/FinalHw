@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Ata/Scenes/MainMenu.unity
     guid: 9607762f84138974fb9798c380b852d9
   - enabled: 1
-    path: Assets/Ata/Scenes/Test.unity
-    guid: 69a7d2ad4c36ad34ebe2a815db8d5ffc
+    path: Assets/Ahmet/Scenes/Maps.unity
+    guid: 6f08b2d45a4806640bb2e9bb65199957
   m_configObjects: {}

@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Firing Rifle.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Firing Rifle.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/textures/CharacterController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/textures/CharacterController.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_2_2023_10_17_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_2_2023_10_17_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3Defaults.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +150,7 @@
       <workItem from="1684413960085" duration="3236000" />
       <workItem from="1684486667592" duration="2656000" />
       <workItem from="1684506208119" duration="1796000" />
+      <workItem from="1684673531406" duration="332000" />
     </task>
     <servers />
   </component>
