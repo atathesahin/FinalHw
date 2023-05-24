@@ -23,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     
     //
-    
+    private SkinnedMeshRenderer _skinnedMeshRenderer;
+
+    //private MainManager _mainManager;
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
@@ -31,8 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         _status.SetState(_currentHp,_maxHp);
         _status.GetComponent<BarStatus>();
-
-
+        _skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
     void Update()
     {
@@ -53,6 +54,11 @@ public class PlayerMovement : MonoBehaviour
         }
         
 
+    }
+
+    public void TeleportShader()
+    {
+        _skinnedMeshRenderer.material.SetFloat("DissolveTime",1.0f);
     }
 
     void Movement()
@@ -103,8 +109,9 @@ public class PlayerMovement : MonoBehaviour
             _animator.SetTrigger("Death");
             isDead = true;
             ES3.DeleteFile("AutoSave.es3");
-            
+            MainManager.Instance.Pause();
         }
+
         _status.SetState(_currentHp,_maxHp);
     }
 
@@ -114,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_currentHp <= 0)
         {
-           
+            
             //return;
         }
 
@@ -127,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
         _status.SetState(_currentHp,_maxHp);
         
     }
+
 
     private void HealReg()
     {

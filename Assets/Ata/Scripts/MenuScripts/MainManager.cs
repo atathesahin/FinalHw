@@ -55,7 +55,7 @@ public class MainManager : MonoBehaviour
         
     }
   
-    private void Pause()
+    public void Pause()
     {
         
             pause.SetActive(true);

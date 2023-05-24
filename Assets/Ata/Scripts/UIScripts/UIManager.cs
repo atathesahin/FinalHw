@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene("Maps");
+        SceneManager.LoadScene("Test");
     }
 
     public void SaveLoad()

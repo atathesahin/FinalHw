@@ -3,26 +3,78 @@
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/AssetImports/StoneBarrier1.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/AssetImports/StoneBarrier1.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/CactusSkin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/CactusSkin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cratemetal1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cratemetal1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cratewoodskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cratewoodskin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cross.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cross.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cross2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Cross2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/Collumtype2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/Collumtype2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/ExitPortal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/ExitPortal.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/GOLEM_T-POSE_BLUE.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Golem/GOLEM_T-POSE_BLUE.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Skeleton/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Skeleton/Skeleton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalskin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalskin2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalskin2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalskin3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalskin3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalstoneskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Portalstoneskin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wallskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wallskin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wallskin2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wallskin2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wallskin3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wallskin3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Waterskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Waterskin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden4.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Wooden4.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/stone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/stone3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Barrier.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Barrier.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Crate1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Crate1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Crate2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Crate2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Wallmat1wf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Wallmat1wf.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Wallmatreinforce1wf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/Wallmatreinforce1wf.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/cmat1wf.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/LevelMat/cmat1wf.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Boss Golem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Boss Golem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/1001_Base_Color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/1001_Base_Color.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Black.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Black.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Hot Trail Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Hot Trail Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Hot Trail.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Hot Trail.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/New Material 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/New Material 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/New Material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Purple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Speed.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Speed.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/textures/New Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/textures/New Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Material.007 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Material.007 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Material.007.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Material.007.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Materials/Bullet_0.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Materials/Bullet_0.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test/NavMesh.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test/NavMesh.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Column/Column1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Column/Column1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Door.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Door.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Grass/Grass1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Grass/Grass1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Grass/Grass2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Grass/Grass2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Stone.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Textures and materials/Stone.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +91,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MenuCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/CoinSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Drawing/Controllers/ShaderInputViewController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,7 +216,11 @@
       <workItem from="1684673531406" duration="839000" />
       <workItem from="1684773744576" duration="4037000" />
       <workItem from="1684782696844" duration="1817000" />
-      <workItem from="1684831652569" duration="1580000" />
+      <workItem from="1684831652569" duration="3500000" />
+      <workItem from="1684848839197" duration="353000" />
+      <workItem from="1684850257833" duration="5629000" />
+      <workItem from="1684940336760" duration="707000" />
+      <workItem from="1684946558236" duration="8732000" />
     </task>
     <servers />
   </component>

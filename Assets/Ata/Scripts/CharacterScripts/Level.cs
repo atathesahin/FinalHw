@@ -24,7 +24,8 @@ public class Level : MonoBehaviour
     public GameObject[] weapons;
     private int currentWeaponIndex = 0;
     
-    
+    //
+
     int TO_LEVEL_UP
     {
         get
@@ -38,32 +39,39 @@ public class Level : MonoBehaviour
         _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
         _player = GetComponent<PlayerMovement>();
-        
         UpdateWeapon();
     }
 
     private void Update()
     {
+
         LoopLevel();
         ChangeWeapon();
-
+        
     }
-    void LoopLevel()
+
+
+    private void LoopLevel()
     {
-        if (level % teleportInterval == 0 && level != currentLevel)
+        
+        if (level % 4 == 0 && level != currentLevel)
         {
             currentLevel = level;
             //TeleportToNextPoint();
             TeleportToNextPoint(teleportPoints);
-   
+            _player.TeleportShader();
+
         }
-        else if (level % specialTeleportInterval ==  0 && level != currentLevel) {
+        else if (level % 17 == 0 && level != currentLevel) {
             currentLevel = level;
-            
+
             SafeTeleportToNextPoint(safeTeleport);
-            
+           
+
         }
         CameraScript.Instance.CarmeraNextRoom();
+        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -87,7 +95,7 @@ public class Level : MonoBehaviour
         {
             _currentExperience -= TO_LEVEL_UP;
             level += 1;
-            _maxHealth = GetComponent<PlayerMovement>()._maxHp += 10;
+            //_maxHealth = GetComponent<PlayerMovement>()._maxHp += 10;
             _experience.SetLevelText(level);
         }
     }
