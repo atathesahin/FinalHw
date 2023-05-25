@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public float _maxHp = 100;
     public float _currentHp = 100;
     private float healTime;
-    private float hpReg = 0.1f;
+    public float hpReg = 0.1f;
 
     //
     public bool isDead = false;
@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     //
     private SkinnedMeshRenderer _skinnedMeshRenderer;
 
-    //private MainManager _mainManager;
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
@@ -34,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         _status.SetState(_currentHp,_maxHp);
         _status.GetComponent<BarStatus>();
         _skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+
     }
     void Update()
     {
@@ -110,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
             isDead = true;
             ES3.DeleteFile("AutoSave.es3");
             MainManager.Instance.Pause();
+           
         }
 
         _status.SetState(_currentHp,_maxHp);

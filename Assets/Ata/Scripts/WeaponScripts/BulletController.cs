@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _trail = GetComponent<TrailRenderer>();
     }
-
+    
     void Update()
     {
         _currentLifetime += Time.deltaTime;

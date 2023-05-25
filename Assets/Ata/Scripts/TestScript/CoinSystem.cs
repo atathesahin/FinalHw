@@ -9,7 +9,7 @@ public class CoinSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinText;
     void Start()
     {
-        coinText.text = "Coins: " + _currentCoin.ToString();
+        UpdateUI();
     }
 
     // Update is called once per frame
@@ -18,9 +18,9 @@ public class CoinSystem : MonoBehaviour
         
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
-        
+        coinText.text = "Coins: " + _currentCoin.ToString();
     }
     public void AddCoin(int amount)
     {

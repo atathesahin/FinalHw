@@ -35,6 +35,7 @@ public class WeaponSystem : MonoBehaviour
     //
     private PlayerMovement _player;
     private bool isDead = false;
+
     private void Start()
     {
      
@@ -44,6 +45,7 @@ public class WeaponSystem : MonoBehaviour
         ammoText = GameObject.Find("AmmoText").GetComponent<TextMeshProUGUI>();
         weaponNameText = GameObject.Find("WeaponText").GetComponent<TextMeshProUGUI>();
         weaponTransform = GetComponent<Transform>();
+
         UpdateFireModeText();
         UpdateUI();
         weaponOriginRotation = weaponTransform.localRotation;
