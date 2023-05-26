@@ -26,6 +26,7 @@ public class MainManager : MonoBehaviour
     private static MainManager instance;
     [SerializeField]private GameObject pause;
     [SerializeField]private GameObject backMenu;
+    [SerializeField]private GameObject deathPauseMenu;
     //[SerializeField] private GameObject image;
 
     public bool isPause;
@@ -64,6 +65,13 @@ public class MainManager : MonoBehaviour
             //image.SetActive(true);
             isPause = true;
 
+    }
+
+    public void DeathPause()
+    {
+        deathPauseMenu.SetActive(true);
+        Time.timeScale = 0f;
+        isPause = true;
     }
 
     

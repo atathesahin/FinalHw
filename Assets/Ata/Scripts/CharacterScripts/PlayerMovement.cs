@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public float _currentHp = 100;
     private float healTime;
     public float hpReg = 0.1f;
+    public float maxArmor = 10f;
+    public float currentArmor = 1f;
+    
 
     //
     public bool isDead = false;
@@ -33,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         _status.SetState(_currentHp,_maxHp);
         _status.GetComponent<BarStatus>();
         _skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        //currentArmor = maxArmor;
 
     }
     void Update()
@@ -58,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void TeleportShader()
     {
-        _skinnedMeshRenderer.material.SetFloat("DissolveTime",1.0f);
+        _skinnedMeshRenderer.sharedMaterial.SetFloat("DissolveTime",1.0f);
     }
 
     void Movement()
@@ -102,15 +106,21 @@ public class PlayerMovement : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        float reducedDamage = damage * (1f - (currentArmor / maxArmor));
         _animator.SetTrigger("Hit");
-        _currentHp -= damage;
+        _currentHp -= reducedDamage;
         if (_currentHp <= 0)
         {
             _animator.SetTrigger("Death");
             isDead = true;
             ES3.DeleteFile("AutoSave.es3");
-            MainManager.Instance.Pause();
+            MainManager.Instance.DeathPause();
            
+        }
+        if (currentArmor <= 0f)
+        {
+          
+            currentArmor = 0f;
         }
 
         _status.SetState(_currentHp,_maxHp);

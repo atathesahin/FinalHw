@@ -15,11 +15,11 @@ public class Level : MonoBehaviour
     
 
 
-    int teleportInterval = 4;
-    int specialTeleportInterval = 17;
-    private int safeTeleportPoint = 0;
-    private int currentLevel;
-    private int currentTeleportPoint = 0;
+    int _teleportInterval = 4;
+    int _specialTeleportInterval = 17;
+    private int _safeTeleportPoint = 0;
+    private int _currentLevel;
+    private int _currentTeleportPoint = 0;
 
     public GameObject[] weapons;
     private int currentWeaponIndex = 0;
@@ -54,16 +54,16 @@ public class Level : MonoBehaviour
     private void LoopLevel()
     {
         
-        if (level % 4 == 0 && level != currentLevel)
+        if (level % _teleportInterval == 0 && level != _currentLevel)
         {
-            currentLevel = level;
+            _currentLevel = level;
             //TeleportToNextPoint();
             TeleportToNextPoint(teleportPoints);
             _player.TeleportShader();
 
         }
-        else if (level % 17 == 0 && level != currentLevel) {
-            currentLevel = level;
+        else if (level % _teleportInterval == 3 && level != _currentLevel) {
+            _currentLevel = level;
 
             SafeTeleportToNextPoint(safeTeleport);
            
@@ -105,28 +105,28 @@ public class Level : MonoBehaviour
     void TeleportToNextPoint(Transform[] points) 
     {
   
-        Transform teleportPoint = points[currentTeleportPoint];
+        Transform teleportPoint = points[_currentTeleportPoint];
         _player.transform.position = teleportPoint.position;
         _player.transform.LookAt(teleportPoint);
     
         
-        currentTeleportPoint++;
-        if (currentTeleportPoint >= points.Length) {
-            currentTeleportPoint = 0;
+        _currentTeleportPoint++;
+        if (_currentTeleportPoint >= points.Length) {
+            _currentTeleportPoint = 0;
         }
     }
 
     void SafeTeleportToNextPoint(Transform[] points)
     {
-        Transform safePoint = points[safeTeleportPoint];
+        Transform safePoint = points[_safeTeleportPoint];
         _player.transform.position = safePoint.position;
         _player.transform.LookAt(safePoint);
 
-        safeTeleportPoint++;
+        _safeTeleportPoint++;
 
-        if (safeTeleportPoint >= points.Length)
+        if (_safeTeleportPoint >= points.Length)
         {
-            safeTeleportPoint = 0;
+            _safeTeleportPoint = 0;
         }
     }
 

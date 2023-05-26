@@ -11,7 +11,7 @@ public class WeaponSystem : MonoBehaviour
     public TextMeshProUGUI ammoText;
     //public GameObject crosshair;
     private GameObject bullet;
-    public WeaponManager _weaponManager;
+    [SerializeField] private WeaponManager _weaponManager;
     private float nextTimeToFire = 1f;
     [SerializeField] private bool isAutomatic = false;
     [SerializeField] TextMeshProUGUI fireModeText;
@@ -70,7 +70,7 @@ public class WeaponSystem : MonoBehaviour
     }
     void Shoot()
     {
-        audioSource.PlayOneShot(_weaponManager.fireSound);
+        //audioSource.PlayOneShot(_weaponManager.fireSound);
         currentAmmo--;
         UpdateUI();
 

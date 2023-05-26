@@ -8,19 +8,22 @@ public class ShopSystem : MonoBehaviour
     private PlayerMovement _playerMovement;
     private CoinSystem _coinSystem;
     [SerializeField] int _healthUpgradeCost = 10;
-    [SerializeField] int _hpRegCost = 10;// Sağlık geliştirme maliyeti
+    [SerializeField] int _hpRegCost = 10;
+    [SerializeField] int _armorCost = 10;// Sağlık geliştirme maliyeti
     //public int damageUpgradeCost = 15; // Hasar geliştirme maliyeti
     private float _maxHealth;
     private bool _inTrigger = false;
     
     
     //
-    private WeaponSystem _weaponSystem;
-
+    //private WeaponSystem _weaponSystem;
+    private List<WeaponSystem> _weaponSystems = new List<WeaponSystem>();
     private void Start()
     {
         _playerMovement = FindObjectOfType<PlayerMovement>();
-        _weaponSystem = FindObjectOfType<WeaponSystem>();
+        //_weaponSystem = FindObjectOfType<WeaponSystem>();
+        WeaponSystem[] weaponSystems = FindObjectsOfType<WeaponSystem>();
+        _weaponSystems.AddRange(weaponSystems);
         _coinSystem = FindObjectOfType<CoinSystem>();
     }
 
@@ -29,7 +32,11 @@ public class ShopSystem : MonoBehaviour
         if (_inTrigger && Input.GetKeyDown(KeyCode.F)) // Tetikleme bölgesindeyken F tuşuna basıldığında
         {
             shopUI.SetActive(true);
-            _weaponSystem.enabled = false; // Alışveriş menüsünü aç veya kapat
+            //_weaponSystem.enabled = false; // Alışveriş menüsünü aç veya kapat
+            foreach (var weaponSystem in _weaponSystems)
+            {
+                weaponSystem.enabled = false;
+            }
         }
     }
 
@@ -48,7 +55,7 @@ public class ShopSystem : MonoBehaviour
         {
             _inTrigger = false; // Tetikleme bölgesinden çıktığını belirt
             shopUI.SetActive(false);
-            _weaponSystem.enabled = true;// Alışveriş menüsünü deaktif hale getir
+            //_weaponSystem.enabled = true;// Alışveriş menüsünü deaktif hale getir
         }
     }
 
@@ -81,6 +88,27 @@ public class ShopSystem : MonoBehaviour
             {
                 _coinSystem._currentCoin -= _hpRegCost;
                 _playerMovement.hpReg += 0.05f;
+                _coinSystem.UpdateUI();
+                Debug.Log("Sağlık geliştirmesi satın alındı!");
+            }
+            else
+            {
+                Debug.Log("Yetersiz bakiye!");
+            }
+        }
+        else
+        {
+            Debug.Log("Karakter özellikleri tanımlı değil!");
+        }
+    }
+    public void Armor()
+    {
+        if (_playerMovement != null && _coinSystem != null)
+        {
+            if (_coinSystem._currentCoin >= _armorCost)
+            {
+                _coinSystem._currentCoin -= _armorCost;
+                _playerMovement.currentArmor += 1f;
                 _coinSystem.UpdateUI();
                 Debug.Log("Sağlık geliştirmesi satın alındı!");
             }

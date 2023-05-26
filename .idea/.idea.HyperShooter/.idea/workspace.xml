@@ -3,12 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Yellow.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Yellow.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Shop.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Shop.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/CoinSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/CoinSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/BulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/BulletController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/WeaponSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/WeaponSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +162,8 @@
       <workItem from="1684850257833" duration="5629000" />
       <workItem from="1684940336760" duration="707000" />
       <workItem from="1684946558236" duration="8934000" />
-      <workItem from="1685041679732" duration="4401000" />
+      <workItem from="1685041679732" duration="4753000" />
+      <workItem from="1685088718827" duration="6119000" />
     </task>
     <servers />
   </component>
