@@ -16,7 +16,8 @@ public class ShopSystem : MonoBehaviour
     
     
     //
-    //private WeaponSystem _weaponSystem;
+    private bool _isShopOpen = false;
+
     private List<WeaponSystem> _weaponSystems = new List<WeaponSystem>();
     private void Start()
     {
@@ -25,6 +26,7 @@ public class ShopSystem : MonoBehaviour
         WeaponSystem[] weaponSystems = FindObjectsOfType<WeaponSystem>();
         _weaponSystems.AddRange(weaponSystems);
         _coinSystem = FindObjectOfType<CoinSystem>();
+
     }
 
     private void Update()
@@ -35,9 +37,11 @@ public class ShopSystem : MonoBehaviour
             //_weaponSystem.enabled = false; // Alışveriş menüsünü aç veya kapat
             foreach (var weaponSystem in _weaponSystems)
             {
+                _isShopOpen = true;
                 weaponSystem.enabled = false;
             }
         }
+      
     }
 
     private void OnTriggerEnter(Collider other)
@@ -55,7 +59,10 @@ public class ShopSystem : MonoBehaviour
         {
             _inTrigger = false; // Tetikleme bölgesinden çıktığını belirt
             shopUI.SetActive(false);
-            //_weaponSystem.enabled = true;// Alışveriş menüsünü deaktif hale getir
+            foreach (var weaponSystem in _weaponSystems)
+            {
+                weaponSystem.enabled = true;
+            }
         }
     }
 
