@@ -14,4 +14,9 @@ public class UIManager : MonoBehaviour
     {
         ES3AutoSaveMgr.Current.Load();
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
