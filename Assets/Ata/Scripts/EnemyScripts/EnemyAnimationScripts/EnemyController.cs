@@ -64,7 +64,7 @@ public class EnemyController : MonoBehaviour
 
 
 
-            if (distance >= 35)
+            if (distance >= 40)
         {
             _agent.isStopped = true;
          

@@ -291,7 +291,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2
-  m_Speed: 6
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240
@@ -316,10 +316,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  experienceReward: 12500
-  enemyDamage: 20
-  _enemyHealth: 50
-  _coinValue: 10
+  experienceReward: 500
+  enemyDamage: 40
+  _enemyHealth: 120
+  _coinValue: 15
 --- !u!136 &537946864
 CapsuleCollider:
   m_ObjectHideFlags: 0

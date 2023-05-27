@@ -3,11 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Gravestone2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/Gravestone3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/Gravestone3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/Gravestone4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/Gravestone4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Waterskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Waterskin1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Eye Monster.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Eye Monster/Eye Monster.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Eye Monster/Eye Monster.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Skeleton/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Skeleton/Skeleton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Purple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/WeaponSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/WeaponSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +170,9 @@
       <workItem from="1684946558236" duration="8934000" />
       <workItem from="1685041679732" duration="4753000" />
       <workItem from="1685088718827" duration="6802000" />
-      <workItem from="1685108224912" duration="299000" />
+      <workItem from="1685108224912" duration="647000" />
+      <workItem from="1685130594630" duration="2400000" />
+      <workItem from="1685173997757" duration="4024000" />
     </task>
     <servers />
   </component>

@@ -1396,8 +1396,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   experienceReward: 12500
-  enemyDamage: 10
-  _enemyHealth: 50
+  enemyDamage: 65
+  _enemyHealth: 200
   _coinValue: 25
 --- !u!195 &8702327898642207958
 NavMeshAgent:
@@ -1568,7 +1568,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 486a6461dbbac28418f0c6328a24f056, type: 3}
+  - {fileID: 2100000, guid: cadef71ad5899814eb1e985f9e951a33, type: 2}
   - {fileID: -6478536213147159724, guid: 486a6461dbbac28418f0c6328a24f056, type: 3}
   - {fileID: -3846018093981099296, guid: 486a6461dbbac28418f0c6328a24f056, type: 3}
   m_StaticBatchInfo:

@@ -591,14 +591,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151687173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.01425, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9206762912620608510}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1232197411
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,7 +2309,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91a118388cefcb34ab75d19c228ad259, type: 2}
+  - {fileID: 2100000, guid: b9cb1ce0d295ce047995e42fcaab5877, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2618,7 +2618,11 @@ MonoBehaviour:
   healthText: {fileID: 0}
   _maxHp: 100
   _currentHp: 100
+  hpReg: 0.1
+  maxArmor: 10
+  currentArmor: 1
   isDead: 0
+  _meshRenderer: {fileID: 4616225618246384710}
 --- !u!114 &1603929192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2634,7 +2638,16 @@ MonoBehaviour:
   teleportPoints:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   safeTeleport:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   level: 1
@@ -2645,6 +2658,7 @@ MonoBehaviour:
   - {fileID: 4191721710708238983}
   - {fileID: 230476866732157906}
   - {fileID: 8398983208402526532}
+  - {fileID: 5616172067162900381}
 --- !u!114 &1603929193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2702,7 +2716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d89c91eaa1790b4aa4791922cf52cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentCoin: 0
+  _currentCoin: 50
   coinText: {fileID: 0}
 --- !u!1 &3903216368377343076
 GameObject:

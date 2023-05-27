@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Level : MonoBehaviour
@@ -39,8 +40,9 @@ public class Level : MonoBehaviour
         _experience.UpdateExperience(_currentExperience,TO_LEVEL_UP);
         _experience.SetLevelText(level);
         _player = GetComponent<PlayerMovement>();
+   
         UpdateWeapon();
-    }
+    }   
 
     private void Update()
     {
@@ -53,25 +55,22 @@ public class Level : MonoBehaviour
 
     private void LoopLevel()
     {
-        
         if (level % _teleportInterval == 0 && level != _currentLevel)
         {
+            
             _currentLevel = level;
             //TeleportToNextPoint();
             TeleportToNextPoint(teleportPoints);
-            _player.TeleportShader();
+ 
 
         }
         else if (level % _teleportInterval == 3 && level != _currentLevel) {
             _currentLevel = level;
 
             SafeTeleportToNextPoint(safeTeleport);
-           
-
         }
         CameraScript.Instance.CarmeraNextRoom();
         
-
     }
 
     private void OnTriggerEnter(Collider other)
@@ -132,35 +131,36 @@ public class Level : MonoBehaviour
 
     void ChangeWeapon()
     {
+        
+        int newWeaponIndex = -1; // Seçilecek yeni silahın indeksi
 
-        if (level == 4 && currentWeaponIndex != 1)
+        if (level >= 4 && currentWeaponIndex != 1)
         {
-            currentWeaponIndex = 1; // 
+            newWeaponIndex = 1;
+        }
+        else if (level >= 8 && currentWeaponIndex != 2)
+        {
+            newWeaponIndex = 2;
+        }
+        else if (level >= 12 && currentWeaponIndex != 3)
+        {
+            newWeaponIndex = 3;
+        }
+        else if (level >= 16 && currentWeaponIndex != 4)
+        {
+            newWeaponIndex = 4;
+        }
+        else if (level >= 20 && currentWeaponIndex != 5)
+        {
+            newWeaponIndex = 5;
+        }
+
+        if (newWeaponIndex != -1)
+        {
+            currentWeaponIndex = newWeaponIndex;
             UpdateWeapon();
         }
 
-        if (level == 8 && currentWeaponIndex != 2)
-        {
-            currentWeaponIndex = 2; // 
-            UpdateWeapon();
-        }
-        if (level == 12 && currentWeaponIndex != 3)
-        {
-            currentWeaponIndex = 3; // 
-            UpdateWeapon();
-        }
-        if (level == 16 && currentWeaponIndex != 4)
-        {
-            currentWeaponIndex = 4; // 
-            UpdateWeapon();
-        }
-        if (level == 20 && currentWeaponIndex != 5)
-        {
-            currentWeaponIndex = 5; // 
-            UpdateWeapon();
-        }
-       
-     
     }
 
     void UpdateWeapon()
@@ -176,12 +176,6 @@ public class Level : MonoBehaviour
         weapons[currentWeaponIndex].SetActive(true);
     }
 
-/*
-        for (int i = 0; i < weapons.Length; i++)
-        {
-            weapons[i].SetActive(i == currentWeaponIndex);
-        }
-        */
 
     }
 

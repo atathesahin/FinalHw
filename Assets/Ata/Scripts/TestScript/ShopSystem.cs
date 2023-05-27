@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShopSystem : MonoBehaviour
@@ -18,13 +19,17 @@ public class ShopSystem : MonoBehaviour
     //
     private bool _isShopOpen = false;
 
+    //
+    [SerializeField] TextMeshProUGUI healthUpgradeCostText; // Sağlık geliştirme maliyeti metin bileşeni
+    [SerializeField] TextMeshProUGUI hpRegCostText; // Hp regen maliyeti metin bileşeni
+    [SerializeField] TextMeshProUGUI armorCostText;
+
     private List<WeaponSystem> _weaponSystems = new List<WeaponSystem>();
     private void Start()
     {
         _playerMovement = FindObjectOfType<PlayerMovement>();
-        //_weaponSystem = FindObjectOfType<WeaponSystem>();
         WeaponSystem[] weaponSystems = FindObjectsOfType<WeaponSystem>();
-        _weaponSystems.AddRange(weaponSystems);
+        _weaponSystems.AddRange(weaponSystems); // Yeni silahları ekle
         _coinSystem = FindObjectOfType<CoinSystem>();
 
     }
@@ -34,14 +39,22 @@ public class ShopSystem : MonoBehaviour
         if (_inTrigger && Input.GetKeyDown(KeyCode.F)) // Tetikleme bölgesindeyken F tuşuna basıldığında
         {
             shopUI.SetActive(true);
-            //_weaponSystem.enabled = false; // Alışveriş menüsünü aç veya kapat
             foreach (var weaponSystem in _weaponSystems)
             {
                 _isShopOpen = true;
                 weaponSystem.enabled = false;
             }
         }
-      
+
+        UpdateUI();
+
+    }
+
+    private void UpdateUI()
+    {
+        healthUpgradeCostText.text = "Cost: " + _healthUpgradeCost.ToString();
+        hpRegCostText.text = "Cost: " + _hpRegCost.ToString();
+        armorCostText.text = "Cost: " + _armorCost.ToString();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -61,9 +74,13 @@ public class ShopSystem : MonoBehaviour
             shopUI.SetActive(false);
             foreach (var weaponSystem in _weaponSystems)
             {
-                weaponSystem.enabled = true;
+                
+                    weaponSystem.enabled = true;
+
             }
         }
+
+        UpdateUI();
     }
 
     public void UpgradeHealth()

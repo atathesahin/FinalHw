@@ -24,10 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
     //
     public bool isDead = false;
-    
-    //
-    private SkinnedMeshRenderer _skinnedMeshRenderer;
-
     private void Awake() => _animator = GetComponent<Animator>();
     
     void Start()
@@ -35,8 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         _status.SetState(_currentHp,_maxHp);
         _status.GetComponent<BarStatus>();
-        _skinnedMeshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
-        //currentArmor = maxArmor;
+
 
     }
     void Update()
@@ -56,13 +51,6 @@ public class PlayerMovement : MonoBehaviour
                 isDead = false;
             }
         }
-        
-
-    }
-
-    public void TeleportShader()
-    {
-        _skinnedMeshRenderer.sharedMaterial.SetFloat("DissolveTime",1.0f);
     }
 
     void Movement()
@@ -157,5 +145,5 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-  
+
 }

@@ -35,6 +35,8 @@ public class WeaponSystem : MonoBehaviour
     //
     private PlayerMovement _player;
     private bool isDead = false;
+    //
+    private bool _isShopOpen = false;
 
     private void Start()
     {
@@ -56,17 +58,7 @@ public class WeaponSystem : MonoBehaviour
         if (isDead == false)
         {
             ReloadWeapon();
-
         }
-    
-        //if (Input.GetKeyDown(KeyCode.X))
-        //{
-            
-        //isAutomatic = !isAutomatic;
-            
-        //UpdateFireModeText();
-        //}
-
     }
     void Shoot()
     {
@@ -77,9 +69,9 @@ public class WeaponSystem : MonoBehaviour
         
         bullet = Instantiate(_weaponManager.bulletPrefab, firePoint.position, firePoint.rotation);
         
-   
-        
     }
+  
+
     void UpdateFireModeText()
     {
         if (isAutomatic)
