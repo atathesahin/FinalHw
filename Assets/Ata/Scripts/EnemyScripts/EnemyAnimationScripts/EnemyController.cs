@@ -28,6 +28,8 @@ public class EnemyController : MonoBehaviour
     //
     //private CoinSystem _coin;
     [SerializeField] private int _coinValue;
+
+    private Rigidbody _rigidbody;
     
     void Start()
     {
@@ -37,7 +39,7 @@ public class EnemyController : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _boxCollider = GetComponentInChildren<BoxCollider>();
         _capsuleCollider = GetComponent<CapsuleCollider>();
-
+        _rigidbody = GetComponent<Rigidbody>();
 
     }
 
