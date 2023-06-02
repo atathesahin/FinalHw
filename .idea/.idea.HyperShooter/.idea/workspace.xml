@@ -2,26 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_2_2023_10_17_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/shelf/Uncommitted_changes_before_Checkout_at_4_2_2023_10_17_PM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Waterskin1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Waterskin1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Eye Monster.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Eye Monster/Eye Monster.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Eye Monster/Eye Monster.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Skeleton/Skeleton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Skeleton/Skeleton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Blue.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Objects/Materials/Purple.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Prefabs/Character/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scenes/Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scenes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/Maps/NavMesh.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Scenes/SampleScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Scenes/SampleScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/WeaponSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/WeaponScripts/WeaponSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Easy Save 3/Resources/ES3/ES3GlobalReferences.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +33,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MenuCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/CoinSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@12.1.10/Editor/Drawing/Controllers/ShaderInputViewController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +61,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\karah\HyperShooter -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\karah\HyperShooter" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -76,7 +69,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.26f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\karah\HyperShooter -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\karah\HyperShooter" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -173,6 +166,7 @@
       <workItem from="1685108224912" duration="647000" />
       <workItem from="1685130594630" duration="2400000" />
       <workItem from="1685173997757" duration="4024000" />
+      <workItem from="1685732615691" duration="730000" />
     </task>
     <servers />
   </component>
