@@ -8,9 +8,13 @@ public class ShopSystem : MonoBehaviour
     public GameObject shopUI; // Alışveriş menüsü
     private PlayerMovement _playerMovement;
     private CoinSystem _coinSystem;
+
+    
+    
     [SerializeField] int _healthUpgradeCost = 10;
     [SerializeField] int _hpRegCost = 10;
-    [SerializeField] int _armorCost = 10;// Sağlık geliştirme maliyeti
+    [SerializeField] int _armorCost = 10;
+    [SerializeField] int _bulletCost = 10;// Sağlık geliştirme maliyeti
     //public int damageUpgradeCost = 15; // Hasar geliştirme maliyeti
     private float _maxHealth;
     private bool _inTrigger = false;
@@ -33,6 +37,7 @@ public class ShopSystem : MonoBehaviour
         _weaponSystems.AddRange(weaponSystems); // Yeni silahları ekle
         */
         _coinSystem = FindObjectOfType<CoinSystem>();
+
 
     }
 

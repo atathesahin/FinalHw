@@ -6,9 +6,9 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     private WeaponManager _weaponManager;
-    public float bulletLifetime = 3f;
+    public float bulletLifetime = 2f;
     
-    private float _bulletDamage = 25f;
+    [SerializeField] private float _bulletDamage = 25f;
     [SerializeField] private float bulletSpeed;
     private float _currentLifetime = 0f;
     private Rigidbody _rigidbody;

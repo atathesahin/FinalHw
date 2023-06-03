@@ -16,7 +16,7 @@ public class Level : MonoBehaviour
     
 
 
-    int _teleportInterval = 4;
+    int _teleportInterval = 5;
     int _specialTeleportInterval = 17;
     private int _safeTeleportPoint = 0;
     private int _currentLevel;
@@ -64,7 +64,7 @@ public class Level : MonoBehaviour
  
 
         }
-        else if (level % _teleportInterval == 3 && level != _currentLevel) {
+        else if (level % _teleportInterval == 0 && level != _currentLevel) {
             _currentLevel = level;
 
             SafeTeleportToNextPoint(safeTeleport);
