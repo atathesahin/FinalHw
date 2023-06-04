@@ -39,7 +39,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DissolveTime: 0
-    - _Edge: 0.046
+    - _Edge: 0.08
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness: 0.08
