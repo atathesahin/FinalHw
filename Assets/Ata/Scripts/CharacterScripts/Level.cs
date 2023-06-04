@@ -16,7 +16,7 @@ public class Level : MonoBehaviour
     
 
 
-    int _teleportInterval = 5;
+    private int _teleportInterval = 4;
     int _specialTeleportInterval = 17;
     private int _safeTeleportPoint = 0;
     private int _currentLevel;
@@ -64,11 +64,13 @@ public class Level : MonoBehaviour
  
 
         }
+        /*
         else if (level % _teleportInterval == 0 && level != _currentLevel) {
             _currentLevel = level;
 
             SafeTeleportToNextPoint(safeTeleport);
         }
+        */
         CameraScript.Instance.CarmeraNextRoom();
         
     }
@@ -134,23 +136,23 @@ public class Level : MonoBehaviour
         
         int newWeaponIndex = -1; // Seçilecek yeni silahın indeksi
 
-        if (level >= 4 && currentWeaponIndex != 1)
+        if (level == 4 && currentWeaponIndex != 1)
         {
             newWeaponIndex = 1;
         }
-        else if (level >= 8 && currentWeaponIndex != 2)
+        else if (level == 8 && currentWeaponIndex != 2)
         {
             newWeaponIndex = 2;
         }
-        else if (level >= 12 && currentWeaponIndex != 3)
+        else if (level == 12 && currentWeaponIndex != 3)
         {
             newWeaponIndex = 3;
         }
-        else if (level >= 16 && currentWeaponIndex != 4)
+        else if (level == 16 && currentWeaponIndex != 4)
         {
             newWeaponIndex = 4;
         }
-        else if (level >= 20 && currentWeaponIndex != 5)
+        else if (level == 20 && currentWeaponIndex != 5)
         {
             newWeaponIndex = 5;
         }

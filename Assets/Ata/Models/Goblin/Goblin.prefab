@@ -1382,6 +1382,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8176222763676358275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,7 +1398,7 @@ MonoBehaviour:
   distance: 0
   experienceReward: 12500
   enemyDamage: 65
-  _enemyHealth: 200
+  _enemyHealth: 25
   _coinValue: 25
 --- !u!195 &8702327898642207958
 NavMeshAgent:

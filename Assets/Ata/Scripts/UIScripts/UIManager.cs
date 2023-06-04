@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene("Test");
+        SceneManager.LoadScene(2);
     }
 
     public void SaveLoad()

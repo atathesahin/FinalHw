@@ -89,7 +89,7 @@ public class MainManager : MonoBehaviour
 
     public void BacktoMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void Save()

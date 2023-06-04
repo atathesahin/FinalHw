@@ -1309,9 +1309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  experienceReward: 500
+  experienceReward: 7500
   enemyDamage: 40
-  _enemyHealth: 120
+  _enemyHealth: 25
   _coinValue: 15
 --- !u!136 &8227609266849726131
 CapsuleCollider:
