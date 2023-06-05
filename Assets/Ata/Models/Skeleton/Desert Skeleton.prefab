@@ -377,6 +377,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6088656707055546286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,8 +1475,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fef536737f985c24ca973b3810481225, type: 2}
-  - {fileID: 2100000, guid: dfc22b52cb4efed478626efed90cade0, type: 2}
+  - {fileID: 2100000, guid: 07cb4ddb67127ed44927265f0aef1bd9, type: 2}
+  - {fileID: 2100000, guid: fd8be84c524e1214095eb59ced227902, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
