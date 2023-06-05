@@ -212,7 +212,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 897c02df9cfa64b41b113d4659692e5a, type: 2}
+  - {fileID: 2100000, guid: b583191f19cd7014fba5a121d49ba31a, type: 2}
   - {fileID: -6478536213147159724, guid: 486a6461dbbac28418f0c6328a24f056, type: 3}
   - {fileID: 2100000, guid: 22ad823ead7b65f448cf2d8a7d91de48, type: 2}
   m_StaticBatchInfo:
@@ -410,6 +410,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &444089323008943285
 MonoBehaviour:
   m_ObjectHideFlags: 0

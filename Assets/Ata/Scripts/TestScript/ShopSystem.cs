@@ -14,28 +14,28 @@ public class ShopSystem : MonoBehaviour
     [SerializeField] int _healthUpgradeCost = 10;
     [SerializeField] int _hpRegCost = 10;
     [SerializeField] int _armorCost = 10;
-    [SerializeField] int _bulletCost = 10;// Sağlık geliştirme maliyeti
-    //public int damageUpgradeCost = 15; // Hasar geliştirme maliyeti
+    [SerializeField] int _bulletCost = 10;
     private float _maxHealth;
     private bool _inTrigger = false;
+    const float MDropChance = 1f / 10f;
     
     
     //
     private bool _isShopOpen = false;
 
     //
-    [SerializeField] TextMeshProUGUI healthUpgradeCostText; // Sağlık geliştirme maliyeti metin bileşeni
-    [SerializeField] TextMeshProUGUI hpRegCostText; // Hp regen maliyeti metin bileşeni
+    [SerializeField] TextMeshProUGUI healthUpgradeCostText; 
+    [SerializeField] TextMeshProUGUI hpRegCostText; 
     [SerializeField] TextMeshProUGUI armorCostText;
 
-    //private List<WeaponSystem> _weaponSystems = new List<WeaponSystem>();
+    private List<WeaponSystem> _weaponSystems = new List<WeaponSystem>();
     private void Start()
     {
         _playerMovement = FindObjectOfType<PlayerMovement>();
-        /*
+        
         WeaponSystem[] weaponSystems = FindObjectsOfType<WeaponSystem>();
         _weaponSystems.AddRange(weaponSystems); // Yeni silahları ekle
-        */
+        
         _coinSystem = FindObjectOfType<CoinSystem>();
 
 
@@ -47,14 +47,14 @@ public class ShopSystem : MonoBehaviour
         {
             shopUI.SetActive(true);
             _isShopOpen = true;
-            /*
+       
              
             foreach (var weaponSystem in _weaponSystems)
             {
                 _isShopOpen = true;
                 weaponSystem.enabled = false;
             }
-            */
+       
         }
 
         UpdateUI();
@@ -70,9 +70,9 @@ public class ShopSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Eğer etkileşime geçilen nesne "Player" etiketine sahipse
+        if (other.CompareTag("Player"))
         {
-            _inTrigger = true; // Tetikleme bölgesinde olduğunu belirt
+            _inTrigger = true; 
             //_characterStats = other.GetComponent<PlayerMovement>(); // Karakter özelliklerini içeren scripte erişim sağla
         }
     }
@@ -81,16 +81,16 @@ public class ShopSystem : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _inTrigger = false; // Tetikleme bölgesinden çıktığını belirt
+            _inTrigger = false; 
             shopUI.SetActive(false);
-            /*
+        
             foreach (var weaponSystem in _weaponSystems)
             {
                 
                     weaponSystem.enabled = true;
 
             }
-            */
+   
         }
 
         UpdateUI();

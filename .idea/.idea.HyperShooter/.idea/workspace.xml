@@ -3,16 +3,41 @@
   <component name="ChangeListManager">
     <list default="true" id="de74e839-5c23-410e-ad13-17bcc2e8ee14" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperShooter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Goblin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/ColumnSkin3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor3 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/Floor3 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Materials/out2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Materials/out2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/ExitPortal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ahmet/Prefabs/ExitPortal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/Column2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/Column2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/Crate1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/Crate1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/StoneBarrier.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/StoneBarrier.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/Wall3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/Wall3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/portal1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/portal1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/portal2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/LevelPrefabs/portal2.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Boss Goblin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Goblin/Boss Goblin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Golem.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Green Golem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Models/Golem/Green Golem.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/FirstMaps.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/FirstMaps.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps/NavMesh.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/ScenesImport/Maps/NavMesh.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/CharacterScripts/Level.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/EnemyScripts/EnemyAnimationScripts/EnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/MenuScripts/MainManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/UIScripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ata/Scripts/TestScript/ShopSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icons/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Icons/Demo.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +191,7 @@
       <workItem from="1685732615691" duration="1131000" />
       <workItem from="1685784250571" duration="3553000" />
       <workItem from="1685812095733" duration="2663000" />
+      <workItem from="1685973348164" duration="3228000" />
     </task>
     <servers />
   </component>

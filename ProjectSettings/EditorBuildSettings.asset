@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Ata/Scenes/LastScene/MainMenu.unity
     guid: deb6d748413c51446ba06639b290f643
   - enabled: 1
-    path: Assets/Ata/ScenesImport/FirstMaps.unity
+    path: Assets/Ata/Scenes/FirstMaps.unity
     guid: 6014bb0a775e78b42ac59e7bb7302a0c
   m_configObjects: {}

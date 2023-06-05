@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 0
-  experienceReward: 7500
+  experienceReward: 15000
   enemyDamage: 40
   _enemyHealth: 25
   _coinValue: 15

@@ -136,23 +136,23 @@ public class Level : MonoBehaviour
         
         int newWeaponIndex = -1; // Seçilecek yeni silahın indeksi
 
-        if (level == 4 && currentWeaponIndex != 1)
+        if (level == 8 && currentWeaponIndex != 1)
         {
             newWeaponIndex = 1;
         }
-        else if (level == 8 && currentWeaponIndex != 2)
+        else if (level == 16 && currentWeaponIndex != 2)
         {
             newWeaponIndex = 2;
         }
-        else if (level == 12 && currentWeaponIndex != 3)
+        else if (level == 24 && currentWeaponIndex != 3)
         {
             newWeaponIndex = 3;
         }
-        else if (level == 16 && currentWeaponIndex != 4)
+        else if (level == 32 && currentWeaponIndex != 4)
         {
             newWeaponIndex = 4;
         }
-        else if (level == 20 && currentWeaponIndex != 5)
+        else if (level == 40 && currentWeaponIndex != 5)
         {
             newWeaponIndex = 5;
         }

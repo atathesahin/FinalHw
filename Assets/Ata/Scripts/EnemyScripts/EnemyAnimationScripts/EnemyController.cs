@@ -89,6 +89,7 @@ public class EnemyController : MonoBehaviour
     {
         _animator.SetTrigger("Death");
         _boxCollider.enabled = false;
+        _agent.isStopped = true;
         Destroy(gameObject, 4f);
     }
 
