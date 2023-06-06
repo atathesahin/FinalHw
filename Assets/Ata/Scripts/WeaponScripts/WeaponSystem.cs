@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 public class WeaponSystem : MonoBehaviour
 {
     public Transform firePoint;
-    public AudioSource audioSource;
+    private AudioSource audioSource;
     public TextMeshProUGUI ammoText;
     //public GameObject crosshair;
     private GameObject bullet;
@@ -40,7 +40,7 @@ public class WeaponSystem : MonoBehaviour
 
     private void Start()
     {
-     
+        audioSource = GetComponent<AudioSource>();
         bullet = GetComponent<GameObject>();
         //_player = GetComponent<PlayerMovement>();
         fireModeText = GameObject.Find("FireModeText").GetComponent<TextMeshProUGUI>();
@@ -62,7 +62,7 @@ public class WeaponSystem : MonoBehaviour
     }
     void Shoot()
     {
-        //audioSource.PlayOneShot(_weaponManager.fireSound);
+        audioSource.PlayOneShot(_weaponManager.fireSound);
         currentAmmo--;
         UpdateUI();
 

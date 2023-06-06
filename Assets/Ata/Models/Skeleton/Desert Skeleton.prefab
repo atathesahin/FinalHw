@@ -392,9 +392,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   experienceReward: 12500
-  enemyDamage: 10
-  _enemyHealth: 50
-  _coinValue: 15
+  enemyDamage: 50
+  _enemyHealth: 250
+  _coinValue: 10
+  MDropChance: 0.1
+  dropObject: {fileID: 0}
 --- !u!195 &6088656707055546287
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -405,7 +407,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2
-  m_Speed: 6
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240

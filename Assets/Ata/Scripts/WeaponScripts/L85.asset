@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffadf17e6cc12314c808fddc8294b0fe, type: 3}
   m_Name: L85
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6969846086796150235, guid: f451f7469d063d44186adc9a36fcc285, type: 3}
-  fireSound: {fileID: 0}
+  bulletPrefab: {fileID: 6969846086796150235, guid: 2719b19fd4aabfd409a9fa97dfe40748, type: 3}
+  fireSound: {fileID: 8300000, guid: d3247579c549643a5b3a95f9224eaf3c, type: 3}

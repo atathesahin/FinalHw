@@ -318,9 +318,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   experienceReward: 9000
-  enemyDamage: 40
-  _enemyHealth: 25
+  enemyDamage: 35
+  _enemyHealth: 150
   _coinValue: 15
+  MDropChance: 0.2
+  dropObject: {fileID: 4354002069696653023, guid: c6e86b825cc7a0847a3e989fd369180c, type: 3}
 --- !u!136 &537946864
 CapsuleCollider:
   m_ObjectHideFlags: 0

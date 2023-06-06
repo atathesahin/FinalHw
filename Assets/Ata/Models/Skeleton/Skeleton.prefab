@@ -932,6 +932,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &919132147892696544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -946,9 +947,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   experienceReward: 12500
-  enemyDamage: 40
-  _enemyHealth: 120
-  _coinValue: 15
+  enemyDamage: 60
+  _enemyHealth: 125
+  _coinValue: 25
+  MDropChance: 0.1
+  dropObject: {fileID: 0}
 --- !u!195 &919132147892696545
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -959,7 +962,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2
-  m_Speed: 6
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240

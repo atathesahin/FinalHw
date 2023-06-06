@@ -10,6 +10,7 @@ TagManager:
   - WayPoints
   - Powerup
   - Safe
+  - Final
   layers:
   - Default
   - TransparentFX

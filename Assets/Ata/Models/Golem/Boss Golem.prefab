@@ -855,6 +855,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!195 &3273491830251350317
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -865,7 +866,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2
-  m_Speed: 6
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240
@@ -892,8 +893,10 @@ MonoBehaviour:
   distance: 0
   experienceReward: 12500
   enemyDamage: 40
-  _enemyHealth: 300
-  _coinValue: 50
+  _enemyHealth: 750
+  _coinValue: 500
+  MDropChance: 8
+  dropObject: {fileID: 7065313718374313452, guid: 53a746c4cf45e0a4f94bb64e2fd3bd78, type: 3}
 --- !u!136 &3522558606139874469
 CapsuleCollider:
   m_ObjectHideFlags: 0

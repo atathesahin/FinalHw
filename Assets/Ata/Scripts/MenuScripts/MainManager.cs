@@ -101,4 +101,6 @@ public class MainManager : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
+
+  
 }

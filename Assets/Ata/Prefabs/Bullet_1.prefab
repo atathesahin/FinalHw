@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65e1e833b6d451438471b7fa6f7006c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletLifetime: 3
-  _bulletDamage: 25
+  bulletLifetime: 2
+  _bulletDamage: 35
   bulletSpeed: 45
 --- !u!96 &814119396188540140
 TrailRenderer:
@@ -191,8 +191,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.9903412
-        value: 0
+        time: 0.9967532
+        value: 0.47014928
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -204,7 +204,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6295982, g: 0.011764688, b: 0.9607843, a: 1}
+      key0: {r: 0.6320754, g: 0.30709326, b: 0.5611323, a: 1}
       key1: {r: 0.9622642, g: 0.8843801, b: 0.013112595, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

@@ -124,7 +124,7 @@ public class ShopSystem : MonoBehaviour
             if (_coinSystem._currentCoin >= _hpRegCost)
             {
                 _coinSystem._currentCoin -= _hpRegCost;
-                _playerMovement.hpReg += 0.05f;
+                _playerMovement.hpReg += 0.02f;
                 _coinSystem.UpdateUI();
                 Debug.Log("Sağlık geliştirmesi satın alındı!");
             }
@@ -145,7 +145,7 @@ public class ShopSystem : MonoBehaviour
             if (_coinSystem._currentCoin >= _armorCost)
             {
                 _coinSystem._currentCoin -= _armorCost;
-                _playerMovement.currentArmor += 1f;
+                _playerMovement.currentArmor += 0.2f;
                 _coinSystem.UpdateUI();
                 Debug.Log("Sağlık geliştirmesi satın alındı!");
             }

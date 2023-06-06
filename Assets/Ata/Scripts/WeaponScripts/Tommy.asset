@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffadf17e6cc12314c808fddc8294b0fe, type: 3}
   m_Name: Tommy
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6969846086796150235, guid: 2719b19fd4aabfd409a9fa97dfe40748, type: 3}
-  fireSound: {fileID: 0}
+  bulletPrefab: {fileID: 6969846086796150235, guid: 30c21863233e2dd4193c951fd3161dff, type: 3}
+  fireSound: {fileID: 8300000, guid: 53a1a8c18087346d18a02d8a4e0c59ca, type: 3}

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 using Vector3 = UnityEngine.Vector3;
 
 
@@ -17,15 +18,20 @@ public class PlayerMovement : MonoBehaviour
     public float _maxHp = 100;
     public float _currentHp = 100;
     private float healTime;
-    public float hpReg = 0.1f;
+    public float hpReg = 0.05f;
     public float maxArmor = 10f;
     public float currentArmor = 1f;
     
 
     //
     public bool isDead = false;
+    
+    [SerializeField] private GameObject speedUp;
+    private bool hasSpeedup;
+    //[SerializeField] private ParticleSystem speedSystem;
     private void Awake() => _animator = GetComponent<Animator>();
     
+    //
     void Start()
     {
 
@@ -145,5 +151,28 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Speedup"))
+        {
+            hasSpeedup = true;
+            Destroy(other.gameObject);
+            speedUp.gameObject.SetActive(true);
+            StartCoroutine(SpeedupCount());
+            _speed = 15;
+            //Instantiate(speedSystem, other.transform.position + new Vector3(0,1,0), transform.rotation);
+        }
+        
+       
+    }
+    private IEnumerator SpeedupCount()
+    {
+        yield return new WaitForSeconds(10);
+        hasSpeedup = false;
+        _speed = 6;
+        speedUp.gameObject.SetActive(false);
+    }
+    
 
 }

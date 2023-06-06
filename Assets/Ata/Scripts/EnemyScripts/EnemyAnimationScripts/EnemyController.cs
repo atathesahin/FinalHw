@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 
 public class EnemyController : MonoBehaviour
@@ -17,7 +18,7 @@ public class EnemyController : MonoBehaviour
     public int experienceReward;
     [SerializeField] private float enemyDamage = 10;
     public float _enemyHealth = 50;
-
+    
     //
     private BoxCollider _boxCollider;
 
@@ -28,6 +29,8 @@ public class EnemyController : MonoBehaviour
     //
     //private CoinSystem _coin;
     [SerializeField] private int _coinValue;
+    [SerializeField] private float MDropChance = 1f / 10f;
+    [SerializeField] private GameObject dropObject;
     
     void Start()
     {
@@ -90,6 +93,7 @@ public class EnemyController : MonoBehaviour
         _animator.SetTrigger("Death");
         _boxCollider.enabled = false;
         _agent.isStopped = true;
+        Drop();
         Destroy(gameObject, 4f);
     }
 
@@ -123,7 +127,11 @@ public class EnemyController : MonoBehaviour
 
     public void TakenDamage(float damage)
     {
-        _animator.SetTrigger("Hit");
+        if (distance >= 6)
+        {
+            _animator.SetTrigger("Hit");
+        }
+       
         _enemyHealth -= damage;
 
         if (_enemyHealth <= 0)
@@ -150,5 +158,13 @@ public class EnemyController : MonoBehaviour
     void DisableAttack()
     {
         _boxCollider.enabled = false;
+    }
+    private void Drop()
+    {
+        if (Random.Range(0f, 1f) <= MDropChance)
+        {
+            Instantiate(dropObject, transform.position + new Vector3(0,-0.4f,0), transform.rotation);
+            
+        }
     }
 }

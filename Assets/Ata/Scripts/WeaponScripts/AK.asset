@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: AK
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6969846086796150235, guid: 2719b19fd4aabfd409a9fa97dfe40748, type: 3}
-  fireSound: {fileID: 0}
+  fireSound: {fileID: 8300000, guid: 53a1a8c18087346d18a02d8a4e0c59ca, type: 3}

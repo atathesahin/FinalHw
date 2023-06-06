@@ -16,8 +16,8 @@ public class Level : MonoBehaviour
     
 
 
-    private int _teleportInterval = 4;
-    int _specialTeleportInterval = 17;
+    //private int _teleportInterval = 4;
+    //int _specialTeleportInterval = 17;
     private int _safeTeleportPoint = 0;
     private int _currentLevel;
     private int _currentTeleportPoint = 0;
@@ -55,6 +55,7 @@ public class Level : MonoBehaviour
 
     private void LoopLevel()
     {
+        /*
         if (level % _teleportInterval == 0 && level != _currentLevel)
         {
             
@@ -156,7 +157,34 @@ public class Level : MonoBehaviour
         {
             newWeaponIndex = 5;
         }
-
+        else if (level == 48 && currentWeaponIndex != 6)
+        {
+            newWeaponIndex = 6;
+        }
+        else if (level == 56 && currentWeaponIndex != 7)
+        {
+            newWeaponIndex = 7;
+        }
+        else if (level == 64 && currentWeaponIndex != 8)
+        {
+            newWeaponIndex = 8;
+        }
+        else if (level == 72 && currentWeaponIndex != 9)
+        {
+            newWeaponIndex = 9;
+        }
+        else if (level == 80 && currentWeaponIndex != 10)
+        {
+            newWeaponIndex = 10;
+        }
+        else if (level == 88 && currentWeaponIndex != 11)
+        {
+            newWeaponIndex = 11;
+        }
+        else if (level == 96 && currentWeaponIndex != 12)
+        {
+            newWeaponIndex = 12;
+        }
         if (newWeaponIndex != -1)
         {
             currentWeaponIndex = newWeaponIndex;
