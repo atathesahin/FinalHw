@@ -12,8 +12,7 @@ public class Level : MonoBehaviour
     private PlayerMovement _player;
     private float _maxHealth;
     private float increaseDamage;
-    private EnemyScriptable _enemyScriptable;
-    
+
 
 
     //private int _teleportInterval = 4;

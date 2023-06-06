@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private GameObject speedUp;
     private bool hasSpeedup;
-    //[SerializeField] private ParticleSystem speedSystem;
     private void Awake() => _animator = GetComponent<Animator>();
     
     //
@@ -161,11 +160,10 @@ public class PlayerMovement : MonoBehaviour
             speedUp.gameObject.SetActive(true);
             StartCoroutine(SpeedupCount());
             _speed = 15;
-            //Instantiate(speedSystem, other.transform.position + new Vector3(0,1,0), transform.rotation);
+            
         }
-        
-       
     }
+    
     private IEnumerator SpeedupCount()
     {
         yield return new WaitForSeconds(10);

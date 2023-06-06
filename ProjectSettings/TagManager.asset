@@ -11,6 +11,7 @@ TagManager:
   - Powerup
   - Safe
   - Final
+  - Trap
   layers:
   - Default
   - TransparentFX
