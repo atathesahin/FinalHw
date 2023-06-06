@@ -159,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(other.gameObject);
             speedUp.gameObject.SetActive(true);
             StartCoroutine(SpeedupCount());
-            _speed = 15;
+            _speed = 10;
             
         }
     }
