@@ -47,9 +47,9 @@ public class Level : MonoBehaviour
     private void Update()
     {
 
-        LoopLevel();
+        //LoopLevel();
         ChangeWeapon();
-        
+        CameraScript.Instance.CarmeraNextRoom();
     }
 
 
@@ -72,7 +72,7 @@ public class Level : MonoBehaviour
             SafeTeleportToNextPoint(safeTeleport);
         }
         */
-        CameraScript.Instance.CarmeraNextRoom();
+        
         
     }
 
@@ -137,54 +137,43 @@ public class Level : MonoBehaviour
         
         int newWeaponIndex = -1; // Seçilecek yeni silahın indeksi
 
-        if (level == 8 && currentWeaponIndex != 1)
+        if (level == 5 && currentWeaponIndex != 1)
         {
             newWeaponIndex = 1;
         }
-        else if (level == 16 && currentWeaponIndex != 2)
+        else if (level == 10 && currentWeaponIndex != 2)
         {
             newWeaponIndex = 2;
         }
-        else if (level == 24 && currentWeaponIndex != 3)
+        else if (level == 15 && currentWeaponIndex != 3)
         {
             newWeaponIndex = 3;
         }
-        else if (level == 32 && currentWeaponIndex != 4)
+        else if (level == 20 && currentWeaponIndex != 4)
         {
             newWeaponIndex = 4;
         }
-        else if (level == 40 && currentWeaponIndex != 5)
+        else if (level == 25 && currentWeaponIndex != 5)
         {
             newWeaponIndex = 5;
         }
-        else if (level == 48 && currentWeaponIndex != 6)
+        else if (level == 30 && currentWeaponIndex != 6)
         {
             newWeaponIndex = 6;
         }
-        else if (level == 56 && currentWeaponIndex != 7)
+        else if (level == 35 && currentWeaponIndex != 7)
         {
             newWeaponIndex = 7;
         }
-        else if (level == 64 && currentWeaponIndex != 8)
+        else if (level == 40 && currentWeaponIndex != 8)
         {
             newWeaponIndex = 8;
         }
-        else if (level == 72 && currentWeaponIndex != 9)
+        else if (level == 50 && currentWeaponIndex != 9)
         {
             newWeaponIndex = 9;
         }
-        else if (level == 80 && currentWeaponIndex != 10)
-        {
-            newWeaponIndex = 10;
-        }
-        else if (level == 150 && currentWeaponIndex != 11)
-        {
-            newWeaponIndex = 11;
-        }
-        else if (level == 170 && currentWeaponIndex != 12)
-        {
-            newWeaponIndex = 12;
-        }
+        
         if (newWeaponIndex != -1)
         {
             currentWeaponIndex = newWeaponIndex;

@@ -791,7 +791,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 2
-  m_Speed: 6
+  m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 240
@@ -817,11 +817,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 0
   experienceReward: 9000
-  enemyDamage: 25
-  _enemyHealth: 250
+  enemyDamage: 65
+  _enemyHealth: 350
   _coinValue: 15
   MDropChance: 0.2
-  dropObject: {fileID: 4354002069696653023, guid: c6e86b825cc7a0847a3e989fd369180c, type: 3}
+  dropObject: {fileID: 2435583779185505147, guid: df6ccc8762fb79c4aa7763f7a81c7763, type: 3}
 --- !u!136 &4244444736775687363
 CapsuleCollider:
   m_ObjectHideFlags: 0

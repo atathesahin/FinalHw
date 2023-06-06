@@ -322,7 +322,7 @@ MonoBehaviour:
   _enemyHealth: 150
   _coinValue: 15
   MDropChance: 0.2
-  dropObject: {fileID: 4354002069696653023, guid: c6e86b825cc7a0847a3e989fd369180c, type: 3}
+  dropObject: {fileID: 2435583779185505147, guid: df6ccc8762fb79c4aa7763f7a81c7763, type: 3}
 --- !u!136 &537946864
 CapsuleCollider:
   m_ObjectHideFlags: 0

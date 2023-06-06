@@ -163,7 +163,7 @@ public class EnemyController : MonoBehaviour
     {
         if (Random.Range(0f, 1f) <= MDropChance)
         {
-            Instantiate(dropObject, transform.position + new Vector3(0,-0.4f,0), transform.rotation);
+            Instantiate(dropObject, transform.position + new Vector3(0,1,0), dropObject.transform.rotation);
             
         }
     }
