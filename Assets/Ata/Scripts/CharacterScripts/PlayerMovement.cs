@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HealReg()
     {
-        if (_currentHp <= 100 && Time.time > healTime)
+        if (_currentHp <= _maxHp && Time.time > healTime)
         {
             Heal(1);
             healTime = Time.time + hpReg;

@@ -177,11 +177,11 @@ public class Level : MonoBehaviour
         {
             newWeaponIndex = 10;
         }
-        else if (level == 88 && currentWeaponIndex != 11)
+        else if (level == 150 && currentWeaponIndex != 11)
         {
             newWeaponIndex = 11;
         }
-        else if (level == 96 && currentWeaponIndex != 12)
+        else if (level == 170 && currentWeaponIndex != 12)
         {
             newWeaponIndex = 12;
         }
